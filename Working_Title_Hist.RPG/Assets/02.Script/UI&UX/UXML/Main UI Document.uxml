@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/02.Script/UI&amp;UX/USS/Main%20UI%20Style.uss?fileID=7433441132597879392&amp;guid=efe3847ba40f0ec4e967138c88543cd5&amp;type=3#Main UI Style" />
+    <ui:VisualElement name="Container">
+        <ui:VisualElement name="LeftPanel">
+            <ui:VisualElement name="LeftTopPanel" style="background-image: none;">
+                <ui:Label name="UserInfo" tabindex="-1" text="Label" display-tooltip-when-elided="true" style="-unity-text-align: middle-center; font-size: 30px; background-image: url(&apos;project://database/Assets/04.Images/userinfo_background.png?fileID=2800000&amp;guid=050b55c71087afa448e39980d3694639&amp;type=3#userinfo_background&apos;);" />
+                <ui:ProgressBar name="UserHP" value="40" title="my-progress" />
+            </ui:VisualElement>
+            <ui:VisualElement name="LeftBottomPanel">
+                <ui:Button display-tooltip-when-elided="true" name="Button" class="general1" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="MiddlePanel" />
+        <ui:VisualElement name="RightPanel">
+            <ui:VisualElement name="RightTopPanel">
+                <ui:Button display-tooltip-when-elided="true" name="MenuOpen" class="menu_open" style="background-image: url(&apos;project://database/Assets/04.Images/menu_background.png?fileID=2800000&amp;guid=0ee906cc7bdb5a443900514c7fdea9c0&amp;type=3#menu_background&apos;); background-color: rgba(255, 255, 255, 0);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="RightBottomPanel">
+                <ui:Button display-tooltip-when-elided="true" class="general2" />
+                <ui:Button display-tooltip-when-elided="true" class="general2" />
+                <ui:Button display-tooltip-when-elided="true" class="general2" />
+                <ui:Button display-tooltip-when-elided="true" class="general2" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

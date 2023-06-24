@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/02.Script/UI&amp;UX/USS/Main%20Menu%20Style.uss?fileID=7433441132597879392&amp;guid=40b4f4746357153499ef171df819dfed&amp;type=3#Main Menu Style" />
+    <ui:VisualElement name="Container">
+        <ui:VisualElement name="LeftPanel">
+            <ui:VisualElement name="menu_box" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:Button text="Sound" display-tooltip-when-elided="true" name="Button" class="menu_btn" />
+                <ui:Button text="Display" display-tooltip-when-elided="true" name="Button" class="menu_btn" />
+                <ui:Button text="Books" display-tooltip-when-elided="true" name="Button" class="menu_btn" />
+                <ui:Button text="Operate" display-tooltip-when-elided="true" name="Button" class="menu_btn" />
+                <ui:Button text="Etc." display-tooltip-when-elided="true" name="Button" class="menu_btn" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightPanel">
+            <ui:ScrollView name="SoundPanel" tabindex="3" style="justify-content: flex-start;">
+                <ui:Button display-tooltip-when-elided="true" name="BacktoMain" tabindex="1" class="menu_btn" style="background-image: url(&apos;project://database/Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/d_refresh@2x.png?fileID=2800000&amp;guid=602b72d4617c3694aa94419fc1b68e04&amp;type=3#d_refresh@2x&apos;); overflow: hidden;" />
+                <ui:Slider picking-mode="Ignore" label="Main Sound" value="42" high-value="100" class="set_slider" style="-unity-text-align: middle-left;" />
+                <ui:Slider picking-mode="Ignore" label="Effect Sound" value="42" high-value="100" class="set_slider" style="-unity-text-align: middle-left;" />
+                <ui:Slider picking-mode="Ignore" label="Story Sound" value="42" high-value="100" class="set_slider" style="-unity-text-align: middle-left;" />
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
