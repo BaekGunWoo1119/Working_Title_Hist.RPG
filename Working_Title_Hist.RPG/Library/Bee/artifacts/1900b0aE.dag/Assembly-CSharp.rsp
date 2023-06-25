@@ -361,7 +361,16 @@
 "Assets/02.Script/PlayerCtrl.cs"
 "Assets/02.Script/TerrainManager.cs"
 "Assets/02.Script/UI&UX/CloseMenu.cs"
+"Assets/02.Script/UI&UX/Joystick Pack/Examples/JoystickPlayerExample.cs"
+"Assets/02.Script/UI&UX/Joystick Pack/Examples/JoystickSetterExample.cs"
+"Assets/02.Script/UI&UX/Joystick Pack/Scripts/Base/Joystick.cs"
+"Assets/02.Script/UI&UX/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs"
+"Assets/02.Script/UI&UX/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs"
+"Assets/02.Script/UI&UX/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs"
+"Assets/02.Script/UI&UX/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs"
+"Assets/02.Script/UI&UX/Joystick(2)/VirtualJoystick.cs"
 "Assets/02.Script/UI&UX/OpenMenu.cs"
+"Assets/07.Animations/PlayerAnim.cs"
 -langversion:9.0
 
 /deterministic
