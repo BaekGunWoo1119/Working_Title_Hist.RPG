@@ -59,12 +59,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\02.Script\UI&amp;UX\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\02.Script\PlayerMove.cs" />
     <Compile Include="Assets\02.Script\UI&amp;UX\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\02.Script\GameManager.cs" />
     <Compile Include="Assets\02.Script\PlayerCtrl.cs" />
     <Compile Include="Assets\02.Script\UI&amp;UX\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\02.Script\TerrainManager.cs" />
     <Compile Include="Assets\02.Script\UI&amp;UX\CloseMenu.cs" />
     <Compile Include="Assets\02.Script\UI&amp;UX\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\02.Script\Reposition.cs" />
     <Compile Include="Assets\02.Script\UI&amp;UX\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\02.Script\UI&amp;UX\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\02.Script\UI&amp;UX\OpenMenu.cs" />

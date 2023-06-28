@@ -18,7 +18,7 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.A))
+        if(Input.GetKey(KeyCode.W))
         {
             Move_Pos(Vector3.left*moveSpeed*Time.deltaTime);
         }

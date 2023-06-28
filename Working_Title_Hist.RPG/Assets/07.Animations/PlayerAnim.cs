@@ -2,40 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnim : MonoBehaviour
+public static class PlayerAnim
 {
-    public Animator animator;
-    private Vector3 previousPosition;
-    void Start()
+    public static void SetWalkingAnimation(bool Walking)
     {
-        // 초기 위치를 이전 위치로 설정
-        previousPosition = transform.position;
+        Animator animator = GameObject.Find("example_model").GetComponent<Animator>();
+        animator.SetBool("Walking", Walking);
     }
 
-    void Update()
+    public static void SetIdleAnimation(bool Idle)
     {
-        Vector3 currentPosition = transform.position;
-
-        // Player의 위치 변화를 감지하여 회전과 애니메이션을 적용
-        if (currentPosition != previousPosition)
-        {
-            Vector3 moveDirection = currentPosition - previousPosition;
-            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            transform.rotation = targetRotation;
-
-            if (animator != null)
-            {
-                animator.SetBool("Walking", true);
-                animator.SetBool("Idle", false);
-            }
-        }
-        else
-        {
-            if (animator != null)
-            {
-                animator.SetBool("Walking", false);
-                animator.SetBool("Idle", true);
-            }
-        }
+        Animator animator = GameObject.Find("example_model").GetComponent<Animator>();
+        animator.SetBool("Idle", Idle);
     }
 }
