@@ -15,4 +15,10 @@ public static class PlayerAnim
         Animator animator = GameObject.Find("example_model").GetComponent<Animator>();
         animator.SetBool("Idle", Idle);
     }
+
+    public static void SetPlayerAttack(bool Attack)
+    {
+        Animator animator = GameObject.Find("example_model").GetComponent<Animator>();
+        animator.SetBool("Attack", Attack);
+    }
 }

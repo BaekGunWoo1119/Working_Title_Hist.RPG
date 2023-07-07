@@ -38,7 +38,7 @@ public class VirtualJoystick : MonoBehaviour
         {
             float horizontalInput = m_JoystickDelta.x; // 조이스틱의 가로 이동 값
             float verticalInput = m_JoystickDelta.y; // 조이스틱의 세로 이동 값
-            
+
             // 이동 방향 벡터 계산
             Vector3 moveDirection = new Vector3(m_JoystickDelta.x, 0f, -m_JoystickDelta.y).normalized;
 
@@ -71,7 +71,6 @@ public class VirtualJoystick : MonoBehaviour
             }
 
         }
-
         //움직임이 없을 때
         else
         {

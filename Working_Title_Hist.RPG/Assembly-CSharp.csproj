@@ -63,6 +63,8 @@
     <Compile Include="Assets\02.Scripts\PlayerCtrl.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\OpenMenu.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\02.Scripts\S_EnemyCtrl.cs" />
+    <Compile Include="Assets\02.Scripts\B_EnemyCtrl.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\02.Scripts\Spawner.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick(2)\VirtualJoystick.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\02.Scripts\Reposition.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\ClickButton.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\CloseMenu.cs" />
     <Compile Include="Assets\07.Animations\PlayerAnim.cs" />
     <Compile Include="Assets\02.Scripts\PoolManager.cs" />
