@@ -58,10 +58,12 @@
     <Analyzer Include="G:\Unity\2022.2.11f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\02.Scripts\PlayerMove.cs" />
     <Compile Include="Assets\02.Scripts\CameraCtrl.cs" />
-    <Compile Include="Assets\02.Scripts\PlayerCtrl.cs" />
+    <Compile Include="Assets\02.Scripts\PlayerMove -KeyboardTest.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\OpenMenu.cs" />
+    <Compile Include="Assets\02.Scripts\Weapon\Weapon_Spear.cs" />
+    <Compile Include="Assets\02.Scripts\Weapon\Weapon_Sword.cs" />
+    <Compile Include="Assets\02.Scripts\Weapon\WeaponCtrl.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\02.Scripts\S_EnemyCtrl.cs" />
     <Compile Include="Assets\02.Scripts\B_EnemyCtrl.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Assets\02.Scripts\Reposition.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\ClickButton.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\CloseMenu.cs" />
+    <Compile Include="Assets\02.Scripts\PlayerState.cs" />
     <Compile Include="Assets\07.Animations\PlayerAnim.cs" />
     <Compile Include="Assets\02.Scripts\PoolManager.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Examples\JoystickSetterExample.cs" />

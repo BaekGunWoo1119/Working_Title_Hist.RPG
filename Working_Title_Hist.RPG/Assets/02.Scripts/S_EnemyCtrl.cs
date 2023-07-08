@@ -9,11 +9,15 @@ public class S_EnemyCtrl : MonoBehaviour {
     bool isLive;
     private Transform Playertr;
 
-    void Awake(){
+    public float E_HP = 100.0f;
+
+    void Awake()
+    {
         Playertr = GameObject.FindGameObjectWithTag("Player").transform;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
-    void Update(){
+    void Update()
+    {
         Animator animator = this.GetComponent<Animator>();
         transform.LookAt(Playertr);
         if(Vector3.Distance(Playertr.position, transform.position) > 3.0f){
@@ -35,5 +39,24 @@ public class S_EnemyCtrl : MonoBehaviour {
             animator.SetBool("Idle", true);
             animator.SetBool("Attack", false);
         }
+
+        if(E_HP <= 0)
+        {
+            E_Die();
+        }
+    }
+    
+    void OnTriggerEnter(Collider other)
+    {
+        if(this.gameObject.tag == "Sword")
+        {
+            E_HP -= PlayerState.PlayerATK;
+            Debug.Log(E_HP);
+        }
+    }
+
+    void E_Die()
+    {
+        Destroy(gameObject);
     }
 }

@@ -5,11 +5,11 @@ using UnityEngine.Windows;
 
 public class VirtualJoystick : MonoBehaviour
 {
-    //Á¶ÀÌ½ºÆ½ º¯¼ö ÁöÁ¤
+    //ï¿½ï¿½ï¿½Ì½ï¿½Æ½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private VisualElement m_JoystickBack;
     private VisualElement m_JoystickHandle;
     private Vector2 m_JoystickPointerDownPosition;
-    private Vector2 m_JoystickDelta; //-1 °ú 1 »çÀÌ °ª(GetAxis¿Í µ¿ÀÏ)
+    private Vector2 m_JoystickDelta; //-1 ï¿½ï¿½ 1 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½(GetAxisï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
 
     public Rigidbody playerRigidbody;
 
@@ -18,12 +18,12 @@ public class VirtualJoystick : MonoBehaviour
 
     void Start()
     {
-        // RigidbodyÀÇ Áß·Â ¿É¼ÇÀ» ÀÌ¿ëÇØ YÃà ÀÌµ¿À» Á¦ÇÑ
+        // Rigidbodyï¿½ï¿½ ï¿½ß·ï¿½ ï¿½É¼ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ Yï¿½ï¿½ ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         playerRigidbody.constraints = RigidbodyConstraints.FreezePositionY;
     }
     void OnEnable()
     {
-        //UI Document¿¡¼­ Á¶ÀÌ½ºÆ½ ¹Þ¾Æ¿Í¼­ ¼³Á¤
+        //UI Documentï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì½ï¿½Æ½ ï¿½Þ¾Æ¿Í¼ï¿½ ï¿½ï¿½ï¿½ï¿½
         var root = GetComponent<UIDocument>().rootVisualElement;
         m_JoystickBack = root.Q("JoystickBack");
         m_JoystickHandle = root.Q("JoystickHandle");
@@ -36,23 +36,23 @@ public class VirtualJoystick : MonoBehaviour
     {
         if (m_JoystickDelta != Vector2.zero)
         {
-            float horizontalInput = m_JoystickDelta.x; // Á¶ÀÌ½ºÆ½ÀÇ °¡·Î ÀÌµ¿ °ª
-            float verticalInput = m_JoystickDelta.y; // Á¶ÀÌ½ºÆ½ÀÇ ¼¼·Î ÀÌµ¿ °ª
+            float horizontalInput = m_JoystickDelta.x; // ï¿½ï¿½ï¿½Ì½ï¿½Æ½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½
+            float verticalInput = m_JoystickDelta.y; // ï¿½ï¿½ï¿½Ì½ï¿½Æ½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½
 
-            // ÀÌµ¿ ¹æÇâ º¤ÅÍ °è»ê
+            // ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             Vector3 moveDirection = new Vector3(m_JoystickDelta.x, 0f, -m_JoystickDelta.y).normalized;
 
-            // ¸ñÇ¥ È¸Àü °¢µµ °è»ê
+            // ï¿½ï¿½Ç¥ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
 
-            // ½ÇÁ¦ È¸Àü Àû¿ë
+            // ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             playerRigidbody.transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
-            // ½ÇÁ¦ ÀÌµ¿ Àû¿ë
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½
             Vector3 moveVelocity = moveDirection * moveSpeed * Time.deltaTime;
             playerRigidbody.transform.Translate(moveVelocity, Space.World);
 
-            //¿òÁ÷ÀÓÀÌ ÀÖÀ» ¶§
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
             if (moveVelocity != Vector3.zero)
             {
                 Quaternion targetRotation = Quaternion.LookRotation(moveVelocity);
@@ -71,7 +71,7 @@ public class VirtualJoystick : MonoBehaviour
             }
 
         }
-        //¿òÁ÷ÀÓÀÌ ¾øÀ» ¶§
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
         else
         {
             PlayerAnim.SetWalkingAnimation(false);
@@ -79,7 +79,7 @@ public class VirtualJoystick : MonoBehaviour
         }
     }
 
-    //Á¶ÀÌ½ºÆ½ Æ÷ÀÎÅÍ ¼³Á¤
+    //ï¿½ï¿½ï¿½Ì½ï¿½Æ½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     void OnPointerDown(PointerDownEvent e)
     {
         m_JoystickHandle.CapturePointer(e.pointerId);

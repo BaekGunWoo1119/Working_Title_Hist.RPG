@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
     public PoolManager pool;
     public Transform[] spawnPoint;
 
-    float SpawnTime;
+    float SpawnTime = 100.0f;
     void Awake()
     {
         spawnPoint = GetComponentsInChildren<Transform>();
@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     {
         SpawnTime += Time.deltaTime;
 
-        if(SpawnTime > 0.2f)
+        if(SpawnTime > 1.0f)
         {
             SpawnTime = 0;
             Spawn();

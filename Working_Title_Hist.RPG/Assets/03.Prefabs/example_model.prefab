@@ -916,7 +916,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3875906252809610364}
   - component: {fileID: 4724341685893313909}
-  - component: {fileID: 8447105646069392740}
   - component: {fileID: 3796283233271362530}
   - component: {fileID: 2669573810604752017}
   m_Layer: 0
@@ -946,7 +945,7 @@ Transform:
   - {fileID: 1463672820677496188}
   - {fileID: 3416458361641812690}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4724341685893313909
 Animator:
@@ -969,20 +968,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8447105646069392740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3965964790211876662}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d38614a08950a264085fd04336227b53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 15
-  rotSpeed: 5
 --- !u!54 &3796283233271362530
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1637,7 +1622,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3416458361641812690}
-  - component: {fileID: 1078728929421311900}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -1674,20 +1658,6 @@ Transform:
   m_Father: {fileID: 3875906252809610364}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1078728929421311900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8755441696713171779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0eff65d7253ac4ca719b1286877226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pool: {fileID: 0}
-  spawnPoint: []
 --- !u!1 &9118602264410679706
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,8 @@ using UnityEngine;
 public class CameraCtrl : MonoBehaviour
 {
 
-    float offsetY = 10.0f;
-    float offsetZ = -5.0f;
+    float offsetY = 15.0f;
+    float offsetZ = -15.0f;
     public GameObject player;
 
     void Start()

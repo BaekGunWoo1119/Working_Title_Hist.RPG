@@ -8,13 +8,15 @@ using UnityEngine;
 using UnityEngine.UIElements;
 public class ClickButton : MonoBehaviour
 {
-    public string AttackBtn; // Button 변수 선언
+    public string AttackBtn;
     public UIDocument UIDocument;
     private Button attackclick;
     private int clickCount;
+
+    public Weapon_Sword Weapon_Sword;
+
     void Awake()
     {
-        // Button 오브젝트 찾아서 할당
         attackclick = UIDocument.rootVisualElement.Q<Button>("Attack");
         attackclick.clicked += AttackBtnClickHandler;
     }
@@ -26,23 +28,26 @@ public class ClickButton : MonoBehaviour
 
     IEnumerator ProcessClickEvent()
     {
+
+        
+
         clickCount++;
 
-        yield return null; // 다음 프레임까지 대기
+        yield return null;
 
-        // 클릭 이벤트가 여러 번 발생해도 로직을 실행하고자 하는 횟수에 맞게 처리
         if (clickCount == 1)
         {
-            // 로직 실행
-            Debug.Log("버튼맨");
+            Debug.Log("怨듦꺽");
+
+            Weapon_Sword.Use();
 
             PlayerAnim.SetWalkingAnimation(false);
             PlayerAnim.SetIdleAnimation(false);
             PlayerAnim.SetPlayerAttack(true);
-            //딜레이 이후 공격 애니메이션 제거
+            
             yield return new WaitForSeconds(1f);
             PlayerAnim.SetPlayerAttack(false);
-            // 클릭 횟수 초기화
+            
             clickCount = 0;
         }
     }

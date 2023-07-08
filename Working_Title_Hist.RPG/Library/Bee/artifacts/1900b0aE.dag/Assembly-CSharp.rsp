@@ -345,8 +345,8 @@
 "Assets/02.Scripts/B_EnemyCtrl.cs"
 "Assets/02.Scripts/CameraCtrl.cs"
 "Assets/02.Scripts/GameManager.cs"
-"Assets/02.Scripts/PlayerCtrl.cs"
-"Assets/02.Scripts/PlayerMove.cs"
+"Assets/02.Scripts/PlayerMove -KeyboardTest.cs"
+"Assets/02.Scripts/PlayerState.cs"
 "Assets/02.Scripts/PoolManager.cs"
 "Assets/02.Scripts/Reposition.cs"
 "Assets/02.Scripts/Spawner.cs"
@@ -362,6 +362,9 @@
 "Assets/02.Scripts/UI&UX/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs"
 "Assets/02.Scripts/UI&UX/Joystick(2)/VirtualJoystick.cs"
 "Assets/02.Scripts/UI&UX/OpenMenu.cs"
+"Assets/02.Scripts/Weapon/WeaponCtrl.cs"
+"Assets/02.Scripts/Weapon/Weapon_Spear.cs"
+"Assets/02.Scripts/Weapon/Weapon_Sword.cs"
 "Assets/07.Animations/PlayerAnim.cs"
 -langversion:9.0
 
