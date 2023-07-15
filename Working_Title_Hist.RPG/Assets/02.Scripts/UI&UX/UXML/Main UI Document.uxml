@@ -4,7 +4,7 @@
         <ui:VisualElement name="LeftPanel">
             <ui:VisualElement name="LeftTopPanel" style="background-image: none;">
                 <ui:Label name="UserInfo" tabindex="-1" text="Label" display-tooltip-when-elided="true" style="-unity-text-align: middle-center; font-size: 30px; background-image: url(&apos;project://database/Assets/04.Images/userinfo_background.png?fileID=2800000&amp;guid=050b55c71087afa448e39980d3694639&amp;type=3#userinfo_background&apos;);" />
-                <ui:ProgressBar name="UserHP" value="40" title="my-progress" />
+                <ui:ProgressBar name="UserHP" value="100" title="my-progress" />
             </ui:VisualElement>
             <ui:VisualElement name="LeftBottomPanel">
                 <ui:VisualElement name="Joystick" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; border-bottom-width: 10px; bottom: 5%; position: absolute; left: 5%;">

@@ -63,6 +63,7 @@
     <Compile Include="Assets\02.Scripts\UI&amp;UX\OpenMenu.cs" />
     <Compile Include="Assets\02.Scripts\Weapon\Weapon_Spear.cs" />
     <Compile Include="Assets\02.Scripts\Weapon\Weapon_Sword.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\HPBarManager.cs" />
     <Compile Include="Assets\02.Scripts\Weapon\WeaponCtrl.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\02.Scripts\S_EnemyCtrl.cs" />

@@ -21,4 +21,18 @@ public static class PlayerAnim
         Animator animator = GameObject.Find("Player").GetComponent<Animator>();
         animator.SetBool("Attack", Attack);
     }
+
+    public static void SetPlayerDie(bool Die)
+    {
+        Animator animator = GameObject.Find("Player").GetComponent<Animator>();
+        animator.SetBool("Die", Die);
+        animator.StopPlayback();
+    }
+
+    public static void SetPlayerDamage(bool Damage)
+    {
+        Animator animator = GameObject.Find("Player").GetComponent<Animator>();
+        animator.SetBool("Damaged", Damage);
+    }
+
 }

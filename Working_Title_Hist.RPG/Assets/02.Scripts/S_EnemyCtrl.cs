@@ -25,6 +25,9 @@ public class S_EnemyCtrl : MonoBehaviour {
             animator.SetBool("Walking", true);
             animator.SetBool("Idle", false);
             animator.SetBool("Attack", false);
+            //자연스러운 걸음을 위한 방향 조정
+            Quaternion targetRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + 30f, transform.rotation.eulerAngles.z);
+            transform.rotation = targetRotation;
         }
         else if(Vector3.Distance(Playertr.position, transform.position) < 5.0f){
             //칼 휘두르는 함수
@@ -33,6 +36,9 @@ public class S_EnemyCtrl : MonoBehaviour {
             animator.SetBool("Attack", true);
             // 칼 휘두를 시 위치 고정
             //transform.position = this.transform.position;
+            // 공격에 맞춰서 방향 전환
+            Quaternion targetRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + 60f, transform.rotation.eulerAngles.z);
+            transform.rotation = targetRotation;
         }
         else {
             animator.SetBool("Walking", false);

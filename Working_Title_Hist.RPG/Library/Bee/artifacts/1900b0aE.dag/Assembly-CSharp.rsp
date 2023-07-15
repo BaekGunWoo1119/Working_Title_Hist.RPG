@@ -353,6 +353,7 @@
 "Assets/02.Scripts/S_EnemyCtrl.cs"
 "Assets/02.Scripts/UI&UX/ClickButton.cs"
 "Assets/02.Scripts/UI&UX/CloseMenu.cs"
+"Assets/02.Scripts/UI&UX/HPBarManager.cs"
 "Assets/02.Scripts/UI&UX/Joystick Pack/Examples/JoystickPlayerExample.cs"
 "Assets/02.Scripts/UI&UX/Joystick Pack/Examples/JoystickSetterExample.cs"
 "Assets/02.Scripts/UI&UX/Joystick Pack/Scripts/Base/Joystick.cs"

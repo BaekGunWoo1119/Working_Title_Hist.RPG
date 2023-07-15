@@ -52,6 +52,7 @@ public class PlayerState : MonoBehaviour
     {
             PlayerHP -= 10.0f;
             Debug.Log(PlayerHP);
+            HPBarManager.DamagedPlayer();
             yield return new WaitForSeconds(0.2f);
     }
 }

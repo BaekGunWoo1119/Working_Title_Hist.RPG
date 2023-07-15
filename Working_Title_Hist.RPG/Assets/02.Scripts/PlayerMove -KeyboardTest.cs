@@ -25,6 +25,7 @@ public class PlayerMove : MonoBehaviour
     {
         PlayerAnim.SetWalkingAnimation(false);
         PlayerAnim.SetIdleAnimation(false);
+        PlayerAnim.SetPlayerDamage(false);
         PlayerAnim.SetPlayerAttack(true);
         //딜레이 이후 공격 애니메이션 제거
         yield return new WaitForSeconds(1f);
@@ -67,6 +68,7 @@ public class PlayerMove : MonoBehaviour
         {
             PlayerAnim.SetWalkingAnimation(true);
             PlayerAnim.SetIdleAnimation(false);
+            PlayerAnim.SetPlayerDamage(false);
         }
         else
         {
