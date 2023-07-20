@@ -5,14 +5,18 @@ using UnityEngine.AI;
  
 public class S_EnemyCtrl : MonoBehaviour {
     public float speed;
+    public float HP = 100.0f;
+    public float MaxHP = 100.0f;
+    public float DEF = 5.0f;
     private Rigidbody target;
     bool isLive;
     private Transform Playertr;
-
-    public float E_HP = 100.0f;
+    private GameObject Player;
 
     void Awake()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        Player.GetComponent<PlayerState>();
         Playertr = GameObject.FindGameObjectWithTag("Player").transform;
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>();
     }
@@ -45,24 +49,49 @@ public class S_EnemyCtrl : MonoBehaviour {
             animator.SetBool("Idle", true);
             animator.SetBool("Attack", false);
         }
-
-        if(E_HP <= 0)
-        {
-            E_Die();
-        }
-    }
-    
-    void OnTriggerEnter(Collider other)
-    {
-        if(this.gameObject.tag == "Sword")
-        {
-            E_HP -= PlayerState.PlayerATK;
-            Debug.Log(E_HP);
-        }
     }
 
-    void E_Die()
+    private void OnEnable()
     {
-        Destroy(gameObject);
+        HP = MaxHP;
+        isLive = true;
+    }
+    void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "Area")
+        {
+            gameObject.SetActive(false);
+        }
+    }
+    void OnTriggerEnter(Collider col)
+    {
+            if (col.gameObject.tag == "Sword"){
+                HP = HP - (PlayerState.PlayerATK - DEF);
+            }
+            if (col.gameObject.tag == "Spear")
+            {
+                HP = (float)(HP - (PlayerState.PlayerATK * 0.75 - DEF * 0.75));
+            }
+            if (col.gameObject.tag == "Axe")
+            {
+                HP = (float)(HP - (PlayerState.PlayerATK - DEF * 0.5));
+            }
+            if (col.gameObject.tag == "Hammer")
+            {
+                HP = (float)(HP - (PlayerState.PlayerATK * 1.5 - DEF * 0.5));
+            }
+            if (col.gameObject.tag == "Arrow")
+            {
+                HP = (float)(HP - (PlayerState.PlayerATK * 0.75 - DEF * 0.75));
+            }
+        if (HP <= 0)
+        {
+            Dead();
+            Debug.Log("E DEAD");
+        }
+    }
+    void Dead()
+    {
+        gameObject.SetActive(false);
     }
 }

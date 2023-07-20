@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     {
         SpawnTime += Time.deltaTime;
 
-        if(SpawnTime > 1.0f)
+        if(SpawnTime > 0.3f)
         {
             SpawnTime = 0;
             Spawn();
@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        GameObject Monster = pool.Get(Random.Range(0, 1));
+        GameObject Monster = pool.Get(Random.Range(0, 2));
         Monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].transform.position;
     }
 }

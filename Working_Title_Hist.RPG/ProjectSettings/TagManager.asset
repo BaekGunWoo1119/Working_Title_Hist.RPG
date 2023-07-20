@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Sword
   - Spear
+  - Arrow
+  - E_Spear
   layers:
   - Default
   - TransparentFX

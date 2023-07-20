@@ -17,41 +17,41 @@
                     {
                         "m_StyleSheet": {
                             "fileID": 7433441132597879392,
-                            "guid": "2a4302ecbb0251e41a6a08c15d18acae",
+                            "guid": "efe3847ba40f0ec4e967138c88543cd5",
                             "type": 3
                         },
                         "m_BackupStyleSheet": {
                             "instanceID": 0
                         },
-                        "m_OldPath": "Assets/02.Scripts/UI&UX/USS/Incounter Style.uss"
+                        "m_OldPath": "Assets/02.Scripts/UI&UX/USS/Main UI Style.uss"
                     }
                 ],
                 "m_VisualTreeAssetBackup": {
                     "instanceID": 0
                 },
-                "m_OpenendVisualTreeAssetOldPath": "Assets/02.Scripts/UI&UX/UXML/Incounter UI.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/02.Scripts/UI&UX/UXML/Main UI Document.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "b3c22eca9d186624387d7404d227530f",
+                    "guid": "49eb0da8d69dc88478be29b5ecbf357d",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
                     "fileID": 7433441132597879392,
-                    "guid": "2a4302ecbb0251e41a6a08c15d18acae",
+                    "guid": "efe3847ba40f0ec4e967138c88543cd5",
                     "type": 3
                 },
                 "m_Settings": {
-                    "UxmlGuid": "b3c22eca9d186624387d7404d227530f",
-                    "UxmlPath": "Assets/02.Scripts/UI&UX/UXML/Incounter UI.uxml",
+                    "UxmlGuid": "49eb0da8d69dc88478be29b5ecbf357d",
+                    "UxmlPath": "Assets/02.Scripts/UI&UX/UXML/Main UI Document.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,
                     "CanvasWidth": 1920,
                     "CanvasHeight": 1080,
                     "MatchGameView": false,
-                    "ZoomScale": 0.3499999940395355,
+                    "ZoomScale": 0.25,
                     "PanOffset": {
-                        "x": 121.51388549804688,
-                        "y": 169.2650909423828
+                        "x": 20.0,
+                        "y": 20.0
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,

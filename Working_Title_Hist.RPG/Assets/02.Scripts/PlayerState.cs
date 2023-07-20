@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerState : MonoBehaviour
 {
     
-    public static float PlayerHP = 100.0f;
+    public float PlayerHP = 100.0f;
     public static float PlayerATK = 25.0f;
     public static float PlayerATK_Rate = 1.0f;
-    public static float PlayerDEF = 5.0f;
-    public static float PlayerMOV = 5.0f;
-    public static float PlayerIVC = 1.0f;
-    public static float IVC_Time = 0.0f;
+    public float PlayerDEF = 5.0f;
+    public float PlayerMOV = 5.0f;
+    public float PlayerIVC = 1.0f;
+    public float IVC_Time = 0.0f;
     private bool IsIVC = false;
 
     public enum Player_State
@@ -45,7 +45,15 @@ public class PlayerState : MonoBehaviour
                 StartCoroutine(DamageEffect());
                 IsIVC = true;
             }
-        }    
+        }
+        if (other.gameObject.tag == "Arrow")
+        {
+            if (IsIVC == false)
+            {
+                StartCoroutine(DamageEffect());
+                IsIVC = true;
+            }
+        }
     }
 
     IEnumerator DamageEffect()

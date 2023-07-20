@@ -72,7 +72,7 @@ Transform:
   - {fileID: 5826097076880748577}
   - {fileID: 5602058201058821305}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1509386563175203052
 Animator:
@@ -206,7 +206,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  E_HP: 100
+  HP: 100
+  MaxHP: 100
+  DEF: 5
 --- !u!1 &820091749930320297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,7 +1095,7 @@ GameObject:
   - component: {fileID: 3522100897469945685}
   m_Layer: 0
   m_Name: Spear
-  m_TagString: Spear
+  m_TagString: E_Spear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
