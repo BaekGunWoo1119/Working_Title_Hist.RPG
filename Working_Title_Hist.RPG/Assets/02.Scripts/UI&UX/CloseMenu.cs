@@ -16,6 +16,7 @@ public class CloseMenu : MonoBehaviour
 
     private Button uxmlButton;
 
+
     private void OnEnable()
     {
         // UXML에서 생성한 Button 요소를 가져옵니다.
@@ -23,6 +24,8 @@ public class CloseMenu : MonoBehaviour
 
         // Button 클릭 이벤트에 대한 핸들러를 등록합니다.
         uxmlButton.clicked += OffButtonClick;
+
+        Time.timeScale = 0;
     }
 
     private void OnDisable()

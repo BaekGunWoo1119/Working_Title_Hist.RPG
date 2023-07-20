@@ -117,7 +117,7 @@
 #UserInfo
 {
 	width: 70%;
-	height: 50px;
+	height: 100px;
 	margin: 15px;
 	background-color: rgba(219, 140, 63, 0.66);
 	text-align: center;

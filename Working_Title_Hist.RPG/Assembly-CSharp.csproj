@@ -70,6 +70,8 @@
     <Compile Include="Assets\02.Scripts\B_EnemyCtrl.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\02.Scripts\Spawner.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\StateView.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\InCounterManager.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick(2)\VirtualJoystick.cs" />
     <Compile Include="Assets\02.Scripts\GameManager.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
@@ -78,6 +80,7 @@
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\02.Scripts\Reposition.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\ClickButton.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\OpenState.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\CloseMenu.cs" />
     <Compile Include="Assets\02.Scripts\PlayerState.cs" />
     <Compile Include="Assets\07.Animations\PlayerAnim.cs" />
@@ -86,10 +89,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Main Menu Style.uss" />
+    <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Incounter UI.uxml" />
     <None Include="Assets\02.Scripts\UI&amp;UX\Joystick(2)\VirtualJoystick.uxml" />
     <None Include="Assets\05.Models\Download\CharacterPack Lowpoly (FREE)\README.txt" />
+    <None Include="Assets\02.Scripts\UI&amp;UX\USS\State Menu Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Main UI Document.uxml" />
+    <None Include="Assets\02.Scripts\UI&amp;UX\USS\Incounter Style.uss" />
     <None Include="Assets\BrokenVector\LowPolyTreePack\README.txt" />
+    <None Include="Assets\02.Scripts\UI&amp;UX\UXML\State UI Document.uxml" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Main UI Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Menu UI Document.uxml" />
   </ItemGroup>

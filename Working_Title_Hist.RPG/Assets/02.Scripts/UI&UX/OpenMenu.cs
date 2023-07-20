@@ -23,6 +23,8 @@ public class OpenMenu : MonoBehaviour
 
         // Button 클릭 이벤트에 대한 핸들러를 등록합니다.
         uxmlButton.clicked += OnButtonClick;
+
+        Time.timeScale = 1;
     }
     private void OnDisable()
     {
