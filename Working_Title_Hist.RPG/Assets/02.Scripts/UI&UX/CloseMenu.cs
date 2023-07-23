@@ -36,6 +36,9 @@ public class CloseMenu : MonoBehaviour
 
     private void OffButtonClick()
     {
+        //게임을 다시 작동
+        Time.timeScale = 1.0f;
+
         // objectToDisable를 비활성화합니다.
         objectToDisable.SetActive(false);
 

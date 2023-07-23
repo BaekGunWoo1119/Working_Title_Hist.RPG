@@ -14,9 +14,11 @@ public class HPBarManager : MonoBehaviour
     {
         var root = UIDocument.rootVisualElement;
         progressBar = root.Q<ProgressBar>("UserHP");
+        var Label = progressBar.Q<Label>();
 
         // 초기 값 설정
         progressBar.value = maxValue;
+        Label.text = progressBar.value.ToString();
     }
 
     // Update is called once per frame
@@ -24,17 +26,18 @@ public class HPBarManager : MonoBehaviour
     {
         UIDocument Document = GameObject.Find("UIDocument").GetComponent<UIDocument>();
         var root = Document.rootVisualElement;
-        ProgressBar progressBar = progressBar = root.Q<ProgressBar>("UserHP");
+        ProgressBar progressBar = root.Q<ProgressBar>("UserHP");
         float currentValue = progressBar.value;
         float maxValue = 100f;
+        var Label = progressBar.Q<Label>();
 
         // value 값 감소
         currentValue -= 10.0f;
+        Label.text = currentValue.ToString();
         //애니메이션
         PlayerAnim.SetWalkingAnimation(false);
         PlayerAnim.SetIdleAnimation(false);
         PlayerAnim.SetPlayerAttack(false);
-        PlayerAnim.SetPlayerDamage(true);
 
         if (currentValue == 0)
         {

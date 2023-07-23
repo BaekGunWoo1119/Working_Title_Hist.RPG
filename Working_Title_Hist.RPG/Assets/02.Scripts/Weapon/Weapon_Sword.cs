@@ -21,6 +21,11 @@ public class Weapon_Sword : MonoBehaviour
         StartCoroutine("Swing");
     }
 
+    void Awake()
+    {
+
+    }
+
     IEnumerator Swing()
     {
         yield return new WaitForSeconds(0.5f);

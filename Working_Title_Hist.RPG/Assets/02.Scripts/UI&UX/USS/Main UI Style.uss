@@ -117,11 +117,21 @@
 #UserInfo
 {
 	width: 70%;
-	height: 50px;
+	height: 100px;
 	margin: 15px;
 	background-color: rgba(219, 140, 63, 0.66);
 	text-align: center;
 	border-radius: 8px;
+}
+
+/* 타이머 설정*/
+
+#TimerText
+{
+	text-align: center;
+	font-size: 64px;
+	color: #fff;
+
 }
 
 /* 유저 체력바 설정 */
@@ -155,6 +165,17 @@
 {
 	background-color: rgb(21, 132, 67);
 	border-radius: 8px;
+}
+
+/* 보스 체력바 설정*/
+#BossHP
+{
+	display: flex;
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+	height: 65px; 
+	margin: 15px;
 }
 
 /* 메뉴 버튼 */

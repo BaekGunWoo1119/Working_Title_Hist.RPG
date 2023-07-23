@@ -18,15 +18,15 @@ public class OpenMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        // UXML에서 생성한 Button 요소를 가져옵니다.
+        // UXML에서 생성한 Button 요소
         uxmlButton = uiDocument.rootVisualElement.Q<Button>("MenuOpen");
 
-        // Button 클릭 이벤트에 대한 핸들러를 등록합니다.
+        // Button 클릭 이벤트에 대한 핸들러를 등록
         uxmlButton.clicked += OnButtonClick;
     }
     private void OnDisable()
     {
-        // 핸들러를 해제합니다.
+        // 핸들러를 해제
         if (uxmlButton != null)
         {
             uxmlButton.clicked -= OnButtonClick;
@@ -35,10 +35,13 @@ public class OpenMenu : MonoBehaviour
 
     private void OnButtonClick()
     {
-        // objectToDisable를 비활성화합니다.
+        //게임을 우선 멈춤
+        Time.timeScale = 0.0f;
+
+        // objectToDisable를 비활성화
         objectToDisable.SetActive(false);
 
-        // objectToEnable를 활성화합니다.
+        // objectToEnable를 활성화
         objectToEnable.SetActive(true);
     }
 }

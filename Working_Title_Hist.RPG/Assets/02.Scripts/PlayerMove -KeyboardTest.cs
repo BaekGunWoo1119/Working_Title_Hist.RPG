@@ -12,44 +12,50 @@ public class PlayerMove : MonoBehaviour
     //private void Move_Pos(Vector3 move) { this.transform.position += move; }
     //private Vector3 Get_Pos() { return this.transform.position; }
 
+    private float ATKDelay;
+
+    public Weapon_Sword Weapon_Sword;
 
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
-        // RigidbodyÀÇ Áß·Â ¿É¼ÇÀ» ÀÌ¿ëÇØ YÃà ÀÌµ¿À» Á¦ÇÑ
+        // Rigidbodyï¿½ï¿½ ï¿½ß·ï¿½ ï¿½É¼ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ Yï¿½ï¿½ ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         playerRigidbody.constraints = RigidbodyConstraints.FreezePositionY;
 
+        Weapon_Sword.traillEffect.enabled = false;
+        Weapon_Sword.Attack_Area.enabled = false;
     }
 
     IEnumerator PlayerAttack()
     {
         PlayerAnim.SetWalkingAnimation(false);
         PlayerAnim.SetIdleAnimation(false);
-        PlayerAnim.SetPlayerDamage(false);
         PlayerAnim.SetPlayerAttack(true);
-        //µô·¹ÀÌ ÀÌÈÄ °ø°Ý ¾Ö´Ï¸ÞÀÌ¼Ç Á¦°Å
-        yield return new WaitForSeconds(1f);
+        
+        yield return new WaitForSeconds(0.1f);
         PlayerAnim.SetPlayerAttack(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        // ¼öÆòÃà°ú ¼öÁ÷ÃàÀÇ ÀÔ·Â°ªÀ» °¨ÁöÇÏ¿© ÀúÀå
+
+        ATKDelay += Time.deltaTime;
+
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½
         float xInput = Input.GetAxis("Horizontal");
         float zInput = Input.GetAxis("Vertical");
-        bool LMB = Input.GetMouseButtonDown(0);
 
-        // ÀÌµ¿ ¹æÇâ º¤ÅÍ °è»ê
+        // ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         Vector3 moveDirection = new Vector3(xInput, 0f, zInput).normalized;
 
-        // ¸ñÇ¥ È¸Àü °¢µµ °è»ê
+        // ï¿½ï¿½Ç¥ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
 
-        // ½ÇÁ¦ È¸Àü Àû¿ë
+        // ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
-        // ½ÇÁ¦ ÀÌµ¿ Àû¿ë
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½
         Vector3 moveVelocity = moveDirection * moveSpeed * Time.deltaTime;
         transform.Translate(moveVelocity, Space.World);
 
@@ -61,14 +67,12 @@ public class PlayerMove : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveVelocity);
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotSpeed * Time.deltaTime);
-
         }
 
         if (moveVelocity.magnitude > 0f)
         {
             PlayerAnim.SetWalkingAnimation(true);
             PlayerAnim.SetIdleAnimation(false);
-            PlayerAnim.SetPlayerDamage(false);
         }
         else
         {
@@ -76,9 +80,14 @@ public class PlayerMove : MonoBehaviour
             PlayerAnim.SetIdleAnimation(true);
         }
 
-        if (LMB)
+        if(ATKDelay > PlayerState.PlayerATK_Rate)
         {
+            ATKDelay = 0;
             StartCoroutine(PlayerAttack());
+            Debug.Log("ê³µê²©");
+
+            Weapon_Sword.Use();
+
         }
     }
 }

@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/02.Scripts/UI&amp;UX/USS/Incounter%20Style.uss?fileID=7433441132597879392&amp;guid=2a4302ecbb0251e41a6a08c15d18acae&amp;type=3#Incounter Style" />
+    <ui:VisualElement name="Container" style="background-color: rgba(56, 42, 38, 0.69);">
+        <ui:VisualElement name="TopPanel">
+            <ui:Label tabindex="-1" text="랜덤 인카운터 출현" display-tooltip-when-elided="true" name="Label" style="-unity-text-align: upper-center; font-size: 90px; color: rgb(238, 166, 26); -unity-font-style: bold;" />
+            <ui:Button display-tooltip-when-elided="true" name="Close" tabindex="1" class="menu_btn" style="background-image: url(&apos;project://database/Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/d_secondarytabclosehover.png?fileID=2800000&amp;guid=6a9d211bea1bc4a429d86cbb2d0b0a3e&amp;type=3#d_secondarytabclosehover&apos;); overflow: hidden; height: 136px; width: 148px; -unity-slice-right: 0; background-color: rgba(188, 188, 188, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="BottomPanel">
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="TextBox" style="-unity-text-align: upper-center; font-size: 60px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
