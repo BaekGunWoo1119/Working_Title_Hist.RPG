@@ -346,6 +346,7 @@
 "Assets/02.Scripts/BossCtrl.cs"
 "Assets/02.Scripts/B_EnemyCtrl.cs"
 "Assets/02.Scripts/CameraCtrl.cs"
+"Assets/02.Scripts/EffectManager.cs"
 "Assets/02.Scripts/GameManager.cs"
 "Assets/02.Scripts/PlayerAnim.cs"
 "Assets/02.Scripts/PlayerMove -KeyboardTest.cs"

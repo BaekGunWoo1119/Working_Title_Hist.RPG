@@ -87,6 +87,7 @@
     <Compile Include="Assets\02.Scripts\UI&amp;UX\ClickButton.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\OpenState.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\CloseMenu.cs" />
+    <Compile Include="Assets\02.Scripts\EffectManager.cs" />
     <Compile Include="Assets\02.Scripts\PlayerState.cs" />
     <Compile Include="Assets\02.Scripts\PoolManager.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Examples\JoystickSetterExample.cs" />
@@ -101,6 +102,7 @@
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Incounter Style.uss" />
     <None Include="Assets\BrokenVector\LowPolyTreePack\README.txt" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\State UI Document.uxml" />
+    <None Include="Assets\04.Images\Material\Particle Resource\Add_Shader.shader" />
     <None Include="Assets\05.Models\Download\WPG_SwordFantasyPack\Documentation.txt" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Main UI Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Menu UI Document.uxml" />

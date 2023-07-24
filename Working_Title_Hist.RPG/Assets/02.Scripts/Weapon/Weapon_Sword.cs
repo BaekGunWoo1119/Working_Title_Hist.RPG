@@ -28,12 +28,12 @@ public class Weapon_Sword : MonoBehaviour
 
     IEnumerator Swing()
     {
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.01f);
         Attack_Area.enabled = true;
         traillEffect.enabled = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.25f);
         Attack_Area.enabled = false;
-        yield return new WaitForSeconds(0.2f);
+        //yield return new WaitForSeconds(0.1f);
         traillEffect.enabled = false;
     }
 }

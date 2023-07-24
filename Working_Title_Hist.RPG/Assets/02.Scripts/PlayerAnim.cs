@@ -18,8 +18,16 @@ public static class PlayerAnim
 
     public static void SetPlayerAttack(bool Attack)
     {
-        Animator animator = GameObject.Find("Player").GetComponent<Animator>();
-        animator.SetBool("Attack", Attack);
+        Animation animation = GameObject.Find("SwordBox").GetComponent<Animation>();
+        if (Attack == true)
+        {
+            animation.Play("EffectAttack");
+        }
+
+        if (Attack == false)
+        {
+            animation.Stop("EffectAttack");
+        }
     }
 
     public static void SetPlayerDie(bool Die)
