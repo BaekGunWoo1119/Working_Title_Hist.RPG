@@ -5,7 +5,6 @@ using UnityEngine;
 public class WeaponCtrl : MonoBehaviour
 {
     public GameObject[] Weapons;
-    public bool[] HasWeapons;
 
     public enum Weapon_Type
     {
@@ -13,16 +12,23 @@ public class WeaponCtrl : MonoBehaviour
         HAMMER,
         SPEAR,
         AXE,
-        BOW
+        BOW,
+        NONE
     }
 
     public Weapon_Type type;
 
+    void Start()
+    {
+        type = Weapon_Type.NONE;
+        Weapon_Change();
+    }
+
     public void Weapon_Change()
     {
         if(type == Weapon_Type.SWORD)
-        {   
-            
+        {
+            Weapons[0].SetActive(true);
         } 
         else if(type == Weapon_Type.HAMMER)
         {
@@ -30,7 +36,7 @@ public class WeaponCtrl : MonoBehaviour
         }
         else if(type == Weapon_Type.SPEAR)
         {
-            
+            Weapons[1].SetActive(true);
         }
         else if(type == Weapon_Type.AXE)
         {
@@ -38,10 +44,7 @@ public class WeaponCtrl : MonoBehaviour
         }   
         else if(type == Weapon_Type.BOW)
         {
-            
+            Weapons[2].SetActive(true);
         }
     }
-
-    
-
 }

@@ -382,6 +382,7 @@
 "Assets/02.Scripts/Weapon/Weapon_Bow.cs"
 "Assets/02.Scripts/Weapon/Weapon_Spear.cs"
 "Assets/02.Scripts/Weapon/Weapon_Sword.cs"
+"Assets/02.Scripts/WeaponBoxManager.cs"
 -langversion:9.0
 
 /deterministic

@@ -15,6 +15,9 @@ public class PlayerMove : MonoBehaviour
     private float ATKDelay;
 
     public Weapon_Sword Weapon_Sword;
+    public Weapon_Bow Weapon_Bow;
+    public Weapon_Spear Weapon_Spear;
+    public WeaponCtrl WeaponCtrl;
 
     void Start()
     {
@@ -28,11 +31,11 @@ public class PlayerMove : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
-        //PlayerAnim.SetWalkingAnimation(false);
-        //PlayerAnim.SetIdleAnimation(false);
+        PlayerAnim.SetWalkingAnimation(false);
+        PlayerAnim.SetIdleAnimation(false);
         PlayerAnim.SetPlayerAttack(true);
         
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.1f);
         PlayerAnim.SetPlayerAttack(false);
     }
 
@@ -82,12 +85,20 @@ public class PlayerMove : MonoBehaviour
 
         if(ATKDelay > PlayerState.PlayerATK_Rate)
         {
-            ATKDelay = 0;
-            StartCoroutine(PlayerAttack());
-            Debug.Log("공격");
+            if(WeaponCtrl.type == WeaponCtrl.Weapon_Type.SWORD)
+            {
+                ATKDelay = 0;
+                StartCoroutine(PlayerAttack());
+                Debug.Log("공격");
 
-            Weapon_Sword.Use();
-
+                Weapon_Sword.Use();
+            }
+            if(WeaponCtrl.type == WeaponCtrl.Weapon_Type.BOW)
+            {
+                ATKDelay = 0;
+                Debug.Log("공격");
+                Weapon_Bow.Use();
+            }
         }
     }
 }

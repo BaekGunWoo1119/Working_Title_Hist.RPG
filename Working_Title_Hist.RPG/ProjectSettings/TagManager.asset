@@ -12,6 +12,7 @@ TagManager:
   - Arrow
   - E_Spear
   - E_Arrow
+  - Bow
   layers:
   - Default
   - TransparentFX
