@@ -9,6 +9,9 @@ public class HPBarManager : MonoBehaviour
     private ProgressBar progressBar;
     private float currentValue = 0f;
     private float maxValue = 100f;
+    public GameObject objectToDisable;
+    public GameObject objectToEnable;
+
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -46,9 +49,22 @@ public class HPBarManager : MonoBehaviour
             PlayerAnim.SetIdleAnimation(false);
             PlayerAnim.SetPlayerAttack(false);
             PlayerAnim.SetPlayerDie(true);
+
         }
 
         // value 값에 따라 채워진 바 업데이트
         progressBar.value = currentValue;
+    }
+
+    void Update()
+    {
+        if (progressBar.value == 0)
+        {
+            // objectToDisable를 비활성화합니다.
+            objectToDisable.SetActive(false);
+
+            // objectToEnable를 활성화합니다.
+            objectToEnable.SetActive(true);
+        }
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Spear
   - Arrow
   - E_Spear
+  - E_Arrow
   layers:
   - Default
   - TransparentFX

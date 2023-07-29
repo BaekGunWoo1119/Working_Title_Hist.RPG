@@ -155,5 +155,5 @@ MonoBehaviour:
   MaxHP: 100
   DEF: 5
   arrowCoolDown: 0
-  Arrow: {fileID: 997467519248762258, guid: 6c2dcb65cd0fc324883024db385c29ab, type: 3}
+  Arrow: {fileID: 8543931987725838434, guid: 6c2dcb65cd0fc324883024db385c29ab, type: 3}
   FirePos: {fileID: 72058202914497632}

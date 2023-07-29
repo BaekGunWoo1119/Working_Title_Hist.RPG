@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a81b0564aa058444ca8d315576c209de
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ON JeongsogeonhaeOTF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 584765cdf4adee14599b95e1bf6a0905, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

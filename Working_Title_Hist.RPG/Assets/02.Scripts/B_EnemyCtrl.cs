@@ -38,9 +38,10 @@ public class B_EnemyCtrl : MonoBehaviour
         }
         else if (Vector3.Distance(Playertr.position, transform.position) < 20.0f)
         {
-            if(arrowCoolDown > 3.0f) { 
-            Instantiate(Arrow, FirePos.transform.position, FirePos.transform.rotation);
-            arrowCoolDown = 0;
+            if(arrowCoolDown > 3.0f) 
+            { 
+                Instantiate(Arrow, FirePos.transform.position, FirePos.transform.rotation);
+                arrowCoolDown = 0;
             }
             // 공격에 맞춰서 방향 전환
             Quaternion targetRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + 60f, transform.rotation.eulerAngles.z);
@@ -62,23 +63,23 @@ public class B_EnemyCtrl : MonoBehaviour
     }
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Sword")
+        if (col.gameObject.tag == "P_Sword")
         {
             HP = HP - (PlayerState.PlayerATK - DEF);
         }
-        if (col.gameObject.tag == "Spear")
+        if (col.gameObject.tag == "P_Spear")
         {
             HP = (float)(HP - (PlayerState.PlayerATK * 0.75 - DEF * 0.75));
         }
-        if (col.gameObject.tag == "Axe")
+        if (col.gameObject.tag == "P_Axe")
         {
             HP = (float)(HP - (PlayerState.PlayerATK - DEF * 0.5));
         }
-        if (col.gameObject.tag == "Hammer")
+        if (col.gameObject.tag == "P_Hammer")
         {
             HP = (float)(HP - (PlayerState.PlayerATK * 1.5 - DEF * 0.5));
         }
-        if (col.gameObject.tag == "Arrow")
+        if (col.gameObject.tag == "P_Arrow")
         {
             HP = (float)(HP - (PlayerState.PlayerATK * 0.75 - DEF * 0.75));
         }
@@ -91,5 +92,6 @@ public class B_EnemyCtrl : MonoBehaviour
     void Dead()
     {
         gameObject.SetActive(false);
+        PlayerState.PlayerEXP += 10.0f;
     }
 }
