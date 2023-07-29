@@ -358,6 +358,7 @@
 "Assets/02.Scripts/P_SpawnPoint.cs"
 "Assets/02.Scripts/Reposition.cs"
 "Assets/02.Scripts/RE_PoolManager.cs"
+"Assets/02.Scripts/SkillCtrl.cs"
 "Assets/02.Scripts/Spawner.cs"
 "Assets/02.Scripts/S_EnemyCtrl.cs"
 "Assets/02.Scripts/Timer.cs"

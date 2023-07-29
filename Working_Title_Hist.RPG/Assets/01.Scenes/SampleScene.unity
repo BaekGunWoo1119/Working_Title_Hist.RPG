@@ -205,6 +205,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8414760876864699088, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
   m_PrefabInstance: {fileID: 239084373}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &104209089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 104209090}
+  m_Layer: 0
+  m_Name: Skill_SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &104209090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104209089}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 319577295}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130603647
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +439,10 @@ PrefabInstance:
       value: -0.01322372
       objectReference: {fileID: 0}
     - target: {fileID: 2693828596005107386, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
+      propertyPath: SkillSpawn
+      value: 
+      objectReference: {fileID: 104209090}
+    - target: {fileID: 2693828596005107386, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
       propertyPath: WeaponCtrl
       value: 
       objectReference: {fileID: 1694773607}
@@ -415,6 +450,14 @@ PrefabInstance:
       propertyPath: Weapon_Bow
       value: 
       objectReference: {fileID: 3279696393073076865}
+    - target: {fileID: 2693828596005107386, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
+      propertyPath: Skillprefab
+      value: 
+      objectReference: {fileID: 7814637122778349137, guid: 0a9851232e345b24b93a200315fe945f, type: 3}
+    - target: {fileID: 2693828596005107386, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
+      propertyPath: Skill2prefab
+      value: 
+      objectReference: {fileID: 1841487666771516122, guid: a4b42d30377093841b1e8cde60845c2f, type: 3}
     - target: {fileID: 2693828596005107386, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
       propertyPath: Weapon_Sword
       value: 
@@ -731,6 +774,7 @@ Transform:
   m_Children:
   - {fileID: 1966717837}
   - {fileID: 1876764426}
+  - {fileID: 104209090}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1958,7 +2002,7 @@ GameObject:
   - component: {fileID: 1966717837}
   - component: {fileID: 1966717838}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: Arrow_SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -34,7 +34,7 @@ public class WeaponCtrl : MonoBehaviour
         {
             
         }
-        else if(type == Weapon_Type.SPEAR)
+        else if(type == Weapon_Type.BOW)
         {
             Weapons[1].SetActive(true);
         }
@@ -42,7 +42,7 @@ public class WeaponCtrl : MonoBehaviour
         {
             
         }   
-        else if(type == Weapon_Type.BOW)
+        else if(type == Weapon_Type.SPEAR)
         {
             Weapons[2].SetActive(true);
         }

@@ -7,6 +7,10 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody playerRigidbody;
     public Animator animator;
 
+    public GameObject Skillprefab;
+    public GameObject Skill2prefab;
+    public Transform SkillSpawn;
+
     public float moveSpeed = 15.0f;
     public float rotSpeed = 5.0f;
     //private void Move_Pos(Vector3 move) { this.transform.position += move; }
@@ -14,7 +18,12 @@ public class PlayerMove : MonoBehaviour
 
     private float ATKDelay;
 
+    private float SkillDelay;
+    private float Skill2Delay;
+    private float Skill2_Interval;
     public Weapon_Sword Weapon_Sword;
+
+
     public Weapon_Bow Weapon_Bow;
     public Weapon_Spear Weapon_Spear;
     public WeaponCtrl WeaponCtrl;
@@ -44,6 +53,9 @@ public class PlayerMove : MonoBehaviour
     {
 
         ATKDelay += Time.deltaTime;
+        SkillDelay += Time.deltaTime;
+        Skill2Delay += Time.deltaTime;
+        Skill2_Interval += Time.deltaTime;
 
         // ������� �������� �Է°��� �����Ͽ� ����
         float xInput = Input.GetAxis("Horizontal");
@@ -52,11 +64,6 @@ public class PlayerMove : MonoBehaviour
         // �̵� ���� ���� ���
         Vector3 moveDirection = new Vector3(xInput, 0f, zInput).normalized;
 
-        // ��ǥ ȸ�� ���� ���
-        float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
-
-        // ���� ȸ�� ����
-        transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
         // ���� �̵� ����
         Vector3 moveVelocity = moveDirection * moveSpeed * Time.deltaTime;
@@ -66,6 +73,7 @@ public class PlayerMove : MonoBehaviour
         //float pushStrength = virtualJoystickInstance.worldObjectPushStrength;
         //VirtualJoystick.MovePlayer(joystickDelta, pushStrength);
 
+
         if (moveVelocity != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveVelocity);
@@ -74,11 +82,17 @@ public class PlayerMove : MonoBehaviour
 
         if (moveVelocity.magnitude > 0f)
         {
+            // ��ǥ ȸ�� ���� ���
+            float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
+
+            // ���� ȸ�� ����
+            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
             PlayerAnim.SetWalkingAnimation(true);
             PlayerAnim.SetIdleAnimation(false);
         }
         else
         {
+
             PlayerAnim.SetWalkingAnimation(false);
             PlayerAnim.SetIdleAnimation(true);
         }
@@ -100,5 +114,29 @@ public class PlayerMove : MonoBehaviour
                 Weapon_Bow.Use();
             }
         }
+        //좌클릭 누르면 스킬 나가게, 3초 딜레이
+        if (Input.GetMouseButton(0) && SkillDelay >= 3.0f)
+        {
+            Instantiate(Skillprefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+            SkillDelay = 0;
+        }
+        //우클릭 누르면 스킬 나가게, 3초 딜레이
+        if (Input.GetMouseButton(1) && Skill2Delay >= 3.0f)
+        {
+            StartCoroutine(Skill2());
+        }
+    }
+    IEnumerator Skill2()
+    {
+        Skill2Delay = 0;
+        Instantiate(Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
     }
 }
