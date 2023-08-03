@@ -63,23 +63,23 @@ public class B_EnemyCtrl : MonoBehaviour
     }
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "P_Sword")
+        if (col.gameObject.tag == "Sword")
         {
             HP = HP - (PlayerState.PlayerATK - DEF);
         }
-        if (col.gameObject.tag == "P_Spear")
+        if (col.gameObject.tag == "Spear")
         {
             HP = (float)(HP - (PlayerState.PlayerATK * 0.75 - DEF * 0.75));
         }
-        if (col.gameObject.tag == "P_Axe")
+        if (col.gameObject.tag == "Axe")
         {
             HP = (float)(HP - (PlayerState.PlayerATK - DEF * 0.5));
         }
-        if (col.gameObject.tag == "P_Hammer")
+        if (col.gameObject.tag == "Hammer")
         {
             HP = (float)(HP - (PlayerState.PlayerATK * 1.5 - DEF * 0.5));
         }
-        if (col.gameObject.tag == "P_Arrow")
+        if (col.gameObject.tag == "Arrow")
         {
             HP = (float)(HP - (PlayerState.PlayerATK * 0.75 - DEF * 0.75));
         }

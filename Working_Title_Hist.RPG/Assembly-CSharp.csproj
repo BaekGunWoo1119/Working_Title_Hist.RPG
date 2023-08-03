@@ -84,6 +84,7 @@
     <Compile Include="Assets\02.Scripts\GameManager.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\ScriptManager.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\02.Scripts\WeaponBoxManager.cs" />
@@ -102,7 +103,9 @@
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Examples\JoystickSetterExample.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\02.Scripts\Scenario\Example.txt" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Main Menu Style.uss" />
+    <None Include="Assets\02.Scripts\UI&amp;UX\USS\Script UI Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Incounter UI.uxml" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\MainScene UI Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Ending UI.uxml" />
@@ -110,10 +113,12 @@
     <None Include="Assets\05.Models\Download\CharacterPack Lowpoly (FREE)\README.txt" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\State Menu Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Select UI.uxml" />
+    <None Include="Assets\05.Models\Download\Sci-fi Polygon Particles\MetaMonkeys_ScifiPolygons.shader" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Main UI Document.uxml" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Incounter Style.uss" />
     <None Include="Assets\BrokenVector\LowPolyTreePack\README.txt" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\State UI Document.uxml" />
+    <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Script UI.uxml" />
     <None Include="Assets\04.Images\Material\Particle Resource\Add_Shader.shader" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Ending UI Style.uss" />
     <None Include="Assets\05.Models\Download\WPG_SwordFantasyPack\Documentation.txt" />

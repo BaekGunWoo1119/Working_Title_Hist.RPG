@@ -7,8 +7,9 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody playerRigidbody;
     public Animator animator;
 
-    public GameObject Skillprefab;
-    public GameObject Skill2prefab;
+    public GameObject S_Skillprefab;
+    public GameObject S_Skill2prefab;
+    public GameObject B_Skillprefab;
     public Transform SkillSpawn;
 
     public float moveSpeed = 15.0f;
@@ -18,12 +19,13 @@ public class PlayerMove : MonoBehaviour
 
     private float ATKDelay;
 
-    private float SkillDelay;
-    private float Skill2Delay;
-    private float Skill2_Interval;
+    private float S_SkillDelay = 10.0f;
+    private float S_Skill2Delay = 10.0f;
+
+    private float B_SkillDelay = 10.0f;
+    private float B_Skill2Delay = 10.0f;
+
     public Weapon_Sword Weapon_Sword;
-
-
     public Weapon_Bow Weapon_Bow;
     public Weapon_Spear Weapon_Spear;
     public WeaponCtrl WeaponCtrl;
@@ -51,11 +53,13 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         ATKDelay += Time.deltaTime;
-        SkillDelay += Time.deltaTime;
-        Skill2Delay += Time.deltaTime;
-        Skill2_Interval += Time.deltaTime;
+
+        S_SkillDelay += Time.deltaTime;
+        S_Skill2Delay += Time.deltaTime;
+
+        B_SkillDelay += Time.deltaTime;
+        B_Skill2Delay += Time.deltaTime;
 
         // ������� �������� �Է°��� �����Ͽ� ����
         float xInput = Input.GetAxis("Horizontal");
@@ -97,9 +101,9 @@ public class PlayerMove : MonoBehaviour
             PlayerAnim.SetIdleAnimation(true);
         }
 
-        if(ATKDelay > PlayerState.PlayerATK_Rate)
+        if (ATKDelay > PlayerState.PlayerATK_Rate)
         {
-            if(WeaponCtrl.type == WeaponCtrl.Weapon_Type.SWORD)
+            if (WeaponCtrl.type == WeaponCtrl.Weapon_Type.SWORD)
             {
                 ATKDelay = 0;
                 StartCoroutine(PlayerAttack());
@@ -107,7 +111,7 @@ public class PlayerMove : MonoBehaviour
 
                 Weapon_Sword.Use();
             }
-            if(WeaponCtrl.type == WeaponCtrl.Weapon_Type.BOW)
+            if (WeaponCtrl.type == WeaponCtrl.Weapon_Type.BOW)
             {
                 ATKDelay = 0;
                 Debug.Log("공격");
@@ -115,28 +119,63 @@ public class PlayerMove : MonoBehaviour
             }
         }
         //좌클릭 누르면 스킬 나가게, 3초 딜레이
-        if (Input.GetMouseButton(0) && SkillDelay >= 3.0f)
+        if (WeaponCtrl.type == WeaponCtrl.Weapon_Type.SWORD)
         {
-            Instantiate(Skillprefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
-            SkillDelay = 0;
+            if (Input.GetMouseButton(0) && S_SkillDelay >= 3.0f)
+            {
+                StartCoroutine(S_Skill());
+            }
+            //우클릭 누르면 스킬 나가게, 3초 딜레이
+            if (Input.GetMouseButton(1) && S_Skill2Delay >= 3.0f)
+            {
+                StartCoroutine(S_Skill2());
+            }
         }
-        //우클릭 누르면 스킬 나가게, 3초 딜레이
-        if (Input.GetMouseButton(1) && Skill2Delay >= 3.0f)
+
+        if (WeaponCtrl.type == WeaponCtrl.Weapon_Type.BOW)
         {
-            StartCoroutine(Skill2());
+            if (Input.GetMouseButton(0) && B_SkillDelay >= 3.0f)
+            {
+                StartCoroutine(B_Skill());
+            }
+            if (Input.GetMouseButton(1) && B_Skill2Delay >= 10.0f)
+            {
+                StartCoroutine(B_Skill2());
+            }
         }
     }
-    IEnumerator Skill2()
+    IEnumerator S_Skill()
     {
-        Skill2Delay = 0;
-        Instantiate(Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        Instantiate(S_Skillprefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        S_SkillDelay = 0;
+        yield return new WaitForSeconds(0f);
+    }
+    IEnumerator S_Skill2()
+    {
+        S_Skill2Delay = 0;
+        Instantiate(S_Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
         yield return new WaitForSeconds(0.2f);
-        Instantiate(Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        Instantiate(S_Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
         yield return new WaitForSeconds(0.2f);
-        Instantiate(Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        Instantiate(S_Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
         yield return new WaitForSeconds(0.2f);
-        Instantiate(Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        Instantiate(S_Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
         yield return new WaitForSeconds(0.2f);
-        Instantiate(Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        Instantiate(S_Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+    }
+
+    IEnumerator B_Skill()
+    {
+        B_SkillDelay = 0;
+        Instantiate(B_Skillprefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
+        yield return new WaitForSeconds(0f);
+    }
+
+    IEnumerator B_Skill2()
+    {
+        B_Skill2Delay = 0;
+        PlayerState.PlayerATK_Rate = 0.1f;
+        yield return new WaitForSeconds(5.0f);
+        PlayerState.PlayerATK_Rate = 1.0f;
     }
 }

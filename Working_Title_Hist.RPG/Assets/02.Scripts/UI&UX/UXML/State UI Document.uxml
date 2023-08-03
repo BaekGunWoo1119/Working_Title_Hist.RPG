@@ -6,12 +6,19 @@
                 <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="UserInfo" style="background-image: none;">
                     <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="UserImg" style="background-image: url(&apos;project://database/Assets/04.Images/Char_Standard_Img.png?fileID=2800000&amp;guid=7e521bddb5f35194cb699c27f6a65f8b&amp;type=3#Char_Standard_Img&apos;);" />
                 </ui:Label>
-                <ui:GroupBox name="UserStat" />
+                <ui:VisualElement name="LvBox" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                    <ui:GroupBox name="UserLv" style="font-size: 48px;">
+                        <ui:Label tabindex="-1" text="LEVEL" display-tooltip-when-elided="true" class="state-list" />
+                        <ui:Label tabindex="-1" text="EXP" display-tooltip-when-elided="true" class="state-list" />
+                        <ui:Label tabindex="-1" text="Skill Point" display-tooltip-when-elided="true" class="state-list" style="text-overflow: ellipsis;" />
+                    </ui:GroupBox>
+                    <ui:GroupBox name="LvResult" style="font-size: 48px;" />
+                </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="RightPanel">
             <ui:Button display-tooltip-when-elided="true" name="BacktoMain" tabindex="1" class="menu_btn" style="background-image: url(&apos;project://database/Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/d_refresh@2x.png?fileID=2800000&amp;guid=602b72d4617c3694aa94419fc1b68e04&amp;type=3#d_refresh@2x&apos;); overflow: hidden; background-color: rgba(56, 56, 56, 0); -unity-background-image-tint-color: rgb(255, 255, 255); -unity-slice-left: 0;" />
-            <ui:VisualElement name="UserState" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+            <ui:VisualElement name="UserState" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); height: 649px;">
                 <ui:VisualElement name="List" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); white-space: normal;">
                     <ui:Label tabindex="-1" text="HP" display-tooltip-when-elided="true" class="state-list" />
                     <ui:Label tabindex="-1" text="Power" display-tooltip-when-elided="true" class="state-list" />
@@ -19,6 +26,11 @@
                     <ui:Label tabindex="-1" text="DEF" display-tooltip-when-elided="true" class="state-list" />
                 </ui:VisualElement>
                 <ui:GroupBox name="Result" style="-unity-background-image-tint-color: rgba(56, 56, 56, 0);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="LevelUpSelect" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                <ui:Button text="Bow" display-tooltip-when-elided="true" name="Bow" class="SelectButton" style="font-size: 50px; background-image: url(&apos;project://database/Assets/04.Images/Eastern_border.psd?fileID=2800000&amp;guid=a5d5ae0273d45454a84c194556f46f05&amp;type=3#Eastern_border&apos;);" />
+                <ui:Button text="Spear" display-tooltip-when-elided="true" name="Spear" class="SelectButton" style="top: 0; font-size: 50px; background-image: url(&apos;project://database/Assets/04.Images/Eastern_border.psd?fileID=2800000&amp;guid=a5d5ae0273d45454a84c194556f46f05&amp;type=3#Eastern_border&apos;);" />
+                <ui:Button text="Sword" display-tooltip-when-elided="true" name="Sword" enable-rich-text="false" class="SelectButton" style="top: 0; font-size: 50px; background-image: url(&apos;project://database/Assets/04.Images/Eastern_border.psd?fileID=2800000&amp;guid=a5d5ae0273d45454a84c194556f46f05&amp;type=3#Eastern_border&apos;); -unity-font: url(&apos;project://database/Assets/04.Images/Font/210%20JeongSock%20OTF%20B.otf?fileID=12800000&amp;guid=a81b0564aa058444ca8d315576c209de&amp;type=3#210 JeongSock OTF B&apos;);" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

@@ -377,6 +377,7 @@
 "Assets/02.Scripts/UI&UX/Joystick(2)/VirtualJoystick.cs"
 "Assets/02.Scripts/UI&UX/OpenMenu.cs"
 "Assets/02.Scripts/UI&UX/OpenState.cs"
+"Assets/02.Scripts/UI&UX/ScriptManager.cs"
 "Assets/02.Scripts/UI&UX/SelectMenuManager.cs"
 "Assets/02.Scripts/UI&UX/StateView.cs"
 "Assets/02.Scripts/Weapon/WeaponCtrl.cs"

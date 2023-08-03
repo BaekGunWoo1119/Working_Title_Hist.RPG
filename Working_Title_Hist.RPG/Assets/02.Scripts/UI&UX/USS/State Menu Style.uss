@@ -20,17 +20,6 @@
 	flex-direction: column;
 }
 
-/* #LeftTopPanel
-{
-	width: 100%;
-	height: 50%;
-}
-
-#LeftBottomPanel
-{
-	width: 100%;
-	height: 50%;
-} */
 
 /* 오른쪽 패널 설정 */
 
@@ -71,7 +60,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    height: 50%;
+    height: 40%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -87,7 +76,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 100%;
+    height: 50%;
     margin: 0;
     padding: 50px;
 }
@@ -116,4 +105,38 @@
 {
     width: 100%;
     height: 100%;
+}
+
+/*레벨 업 설정*/
+
+#LevelUpSelect
+{
+    width: 100%;
+    height: 60%;
+    display: flex;
+	flex-direction: row;
+}
+
+.SelectButton
+{
+	width: 20%;
+	height: 90%;
+	margin: 0 auto;
+	background-color: #ff7f00;
+	border-width: 0px;
+	border-radius: 50px;
+	font-size: 50px;
+}
+
+#LvBox
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#UserLv,
+#LvResult
+{
+    width: 50%;
 }

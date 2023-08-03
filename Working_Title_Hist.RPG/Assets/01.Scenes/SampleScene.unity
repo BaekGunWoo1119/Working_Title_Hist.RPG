@@ -228,12 +228,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104209089}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 319577295}
+  m_Father: {fileID: 1694773605}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130603647
@@ -462,6 +462,18 @@ PrefabInstance:
       propertyPath: Weapon_Sword
       value: 
       objectReference: {fileID: 1876764427}
+    - target: {fileID: 2693828596005107386, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
+      propertyPath: B_Skillprefab
+      value: 
+      objectReference: {fileID: 7094427486202983272, guid: 80a2e03b8ea40ce4991f3ce6019cf780, type: 3}
+    - target: {fileID: 2693828596005107386, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
+      propertyPath: S_Skillprefab
+      value: 
+      objectReference: {fileID: 7814637122778349137, guid: 0a9851232e345b24b93a200315fe945f, type: 3}
+    - target: {fileID: 2693828596005107386, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
+      propertyPath: S_Skill2prefab
+      value: 
+      objectReference: {fileID: 1841487666771516122, guid: a4b42d30377093841b1e8cde60845c2f, type: 3}
     - target: {fileID: 3754651860830558388, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.012327128
@@ -732,6 +744,9 @@ PrefabInstance:
     - {fileID: 4019670718303230135, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
     - {fileID: 4071888965774448539, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6068889076695506078, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 104209090}
     - targetCorrespondingSourceObject: {fileID: 8414760876864699088, guid: ed7b5ec2f609daa46ad7a54926ad3053, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7245359080945509286}
@@ -774,7 +789,6 @@ Transform:
   m_Children:
   - {fileID: 1966717837}
   - {fileID: 1876764426}
-  - {fileID: 104209090}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

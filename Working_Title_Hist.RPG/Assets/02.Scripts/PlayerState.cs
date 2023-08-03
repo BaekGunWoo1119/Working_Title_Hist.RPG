@@ -15,7 +15,7 @@ public class PlayerState : MonoBehaviour
     private bool IsIVC = false;
     public float rotationSpeed = 5f;
 
-    public int PlayerLevel = 1;
+    public static int PlayerLevel = 1;
     public static float PlayerEXP = 0.0f;
     private float MaxEXP = 100.0f;
     public static int SkillPoint = 0;
