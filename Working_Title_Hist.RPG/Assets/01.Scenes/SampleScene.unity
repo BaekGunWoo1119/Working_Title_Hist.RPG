@@ -268,7 +268,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 7653573539752932242, guid: bd1435ac618baf741be6446e1507b46f, type: 3}
-  - {fileID: 8734513669321263606, guid: 5782b89b7a17f4342b08a582b30908b1, type: 3}
+  - {fileID: 8255517230129269891, guid: 5782b89b7a17f4342b08a582b30908b1, type: 3}
+  - {fileID: 7979483012796937953, guid: 5f0b3228451c9c940a1082345332f97a, type: 3}
 --- !u!4 &130603649
 Transform:
   m_ObjectHideFlags: 0
@@ -1967,6 +1968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937233558}
   - component: {fileID: 1937233557}
+  - component: {fileID: 1937233559}
   m_Layer: 5
   m_Name: EndingMenu
   m_TagString: Untagged
@@ -2005,6 +2007,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1937233559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937233556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab30f994297e51849a5d0e9c8d7ee572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiDocument: {fileID: 1937233557}
+  objectToDisable: {fileID: 1937233556}
+  objectToEnable: {fileID: 2087935251}
 --- !u!1 &1966717836
 GameObject:
   m_ObjectHideFlags: 0

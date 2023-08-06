@@ -1073,7 +1073,7 @@ Material:
     - __dirty: 0
     - _commentIfZero_EnableOutlinePass: 0
     - _dissolveedgeintensity: 7.97
-    - _dissolveedgewidth: 0.166
+    - _dissolveedgewidth: 0.3
     - _dissolveglowintensity: 7.23
     - _flicker: 0.223
     - _flicker1: 0.4893474

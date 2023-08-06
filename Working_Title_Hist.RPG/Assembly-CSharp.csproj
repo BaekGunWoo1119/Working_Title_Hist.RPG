@@ -73,8 +73,10 @@
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\02.Scripts\S_EnemyCtrl.cs" />
     <Compile Include="Assets\02.Scripts\B_EnemyCtrl.cs" />
+    <Compile Include="Assets\02.Scripts\GIma_EnemyCtrl.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\02.Scripts\Timer.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\RetryBtn.cs" />
     <Compile Include="Assets\02.Scripts\RE_PoolManager.cs" />
     <Compile Include="Assets\02.Scripts\Spawner.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\StateView.cs" />

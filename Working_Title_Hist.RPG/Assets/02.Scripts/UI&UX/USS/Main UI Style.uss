@@ -163,8 +163,8 @@
 
 .unity-progress-bar__progress
 {
-	background-color: rgb(21, 132, 67);
-	border-radius: 8px;
+	background-color: #008000;
+    border-radius: 8px;
 }
 
 /* 보스 체력바 설정*/
