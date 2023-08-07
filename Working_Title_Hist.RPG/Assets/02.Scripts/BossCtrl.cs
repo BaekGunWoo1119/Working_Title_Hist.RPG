@@ -32,8 +32,14 @@ public class BossCtrl : MonoBehaviour
         progressBar.style.display = DisplayStyle.None;
 
         // 초기 값 설정
+        currentValue = maxValue;
         progressBar.value = maxValue;
         Label.text = progressBar.value.ToString();
+    }
+
+    void BossDamaged()
+    {
+        currentValue -= 10.0f;
     }
 
     void Update()
@@ -43,6 +49,11 @@ public class BossCtrl : MonoBehaviour
             Debug.Log("보스 소환!");
             Instantiate(Boss, BossSpawnerTr.position, BossSpawnerTr.rotation);
             progressBar.style.display = DisplayStyle.Flex;
+        }
+
+        if (Timer.Min == 1 && Timer.Sec == 3 && currentValue == 0)
+        {
+            GameManager.BossDead();
         }
     }
 }

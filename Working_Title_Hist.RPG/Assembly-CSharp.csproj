@@ -91,10 +91,12 @@
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\02.Scripts\WeaponBoxManager.cs" />
     <Compile Include="Assets\02.Scripts\ArrowCtrl.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\StartGame.cs" />
     <Compile Include="Assets\02.Scripts\SkillCtrl.cs" />
     <Compile Include="Assets\02.Scripts\Reposition.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\GameSet_Open.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\SelectMenuManager.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\E_HPBarManager.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\ClickButton.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\OpenState.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\CloseMenu.cs" />
@@ -109,6 +111,7 @@
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Main Menu Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Script UI Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Incounter UI.uxml" />
+    <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Opning UI.uxml" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\MainScene UI Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Ending UI.uxml" />
     <None Include="Assets\02.Scripts\UI&amp;UX\Joystick(2)\VirtualJoystick.uxml" />
@@ -123,6 +126,7 @@
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Script UI.uxml" />
     <None Include="Assets\04.Images\Material\Particle Resource\Add_Shader.shader" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Ending UI Style.uss" />
+    <None Include="Assets\02.Scripts\UI&amp;UX\USS\Opening UI Style.uss" />
     <None Include="Assets\05.Models\Download\WPG_SwordFantasyPack\Documentation.txt" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Main UI Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Menu UI Document.uxml" />

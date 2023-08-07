@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class RetryBtn : MonoBehaviour
 {
     public UIDocument uiDocument;
-    public GameObject objectToDisable;
-    public GameObject objectToEnable;
 
     private Button uxmlButton;
 
@@ -33,19 +32,10 @@ public class RetryBtn : MonoBehaviour
         //게임을 다시 재생
         Time.timeScale = 1.0f;
 
-        //게임 요소 초기화
-        GameObject.Find("Player").transform.position = Vector3.zero;
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject enemy in enemies)
-        {
-            Destroy(enemy);
-        }
-        //피 100으로 변경
+        //체력 원상복귀
         PlayerState.PlayerHP = 100;
-        // objectToDisable를 비활성화
-        objectToDisable.SetActive(false);
 
-        // objectToEnable를 활성화
-        objectToEnable.SetActive(true);
+        //씬 리로드
+        SceneManager.LoadScene("SampleScene");
     }
 }

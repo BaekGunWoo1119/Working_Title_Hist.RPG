@@ -83,6 +83,11 @@ public class B_EnemyCtrl : MonoBehaviour
         {
             HP = (float)(HP - (PlayerState.PlayerATK * 0.75 - DEF * 0.75));
         }
+        //스킬 부분 추가
+        if (col.gameObject.tag == "Skill")
+        {
+            HP = 0;
+        }
 
         if (HP <= 0)
         {

@@ -5,6 +5,7 @@
             <ui:VisualElement name="LeftTopPanel" style="background-image: none;">
                 <ui:Button text="Button" display-tooltip-when-elided="true" name="UserInfo" />
                 <ui:ProgressBar name="UserHP" value="100" title="my-progress" />
+                <ui:ProgressBar name="UserEXP" value="100" title="my-progress" />
             </ui:VisualElement>
             <ui:VisualElement name="LeftBottomPanel">
                 <ui:VisualElement name="Joystick" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; border-bottom-width: 10px; bottom: 5%; position: absolute; left: 5%;">

@@ -5,8 +5,8 @@ using UnityEngine.AI;
  
 public class S_EnemyCtrl : MonoBehaviour {
     public float speed;
-    public float HP = 100.0f;
-    public float MaxHP = 100.0f;
+    public static float HP = 100.0f;
+    public static float MaxHP = 100.0f;
     public float DEF = 5.0f;
     private Rigidbody target;
     bool isLive;

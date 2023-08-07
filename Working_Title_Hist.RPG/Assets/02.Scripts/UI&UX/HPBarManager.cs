@@ -6,9 +6,10 @@ using UnityEngine.UIElements;
 public class HPBarManager : MonoBehaviour
 {
     public UIDocument UIDocument;
-    private ProgressBar progressBar;
-    private float currentValue = 0f;
-    private float maxValue = 100f;
+    private ProgressBar HPBar;
+    private ProgressBar EXPBar;
+    private float currentValue;
+    private float maxValue;
     public GameObject objectToDisable;
     public GameObject objectToEnable;
 
@@ -16,12 +17,14 @@ public class HPBarManager : MonoBehaviour
     void OnEnable()
     {
         var root = UIDocument.rootVisualElement;
-        progressBar = root.Q<ProgressBar>("UserHP");
-        var Label = progressBar.Q<Label>();
+        HPBar = root.Q<ProgressBar>("UserHP");
+        var Label = HPBar.Q<Label>();
 
         // 초기 값 설정
-        progressBar.value = maxValue;
-        Label.text = progressBar.value.ToString();
+        maxValue = PlayerState.PlayerHP;
+        currentValue = maxValue;
+        HPBar.value = maxValue;
+        Label.text = HPBar.value.ToString();
     }
 
     // Update is called once per frame
@@ -58,7 +61,13 @@ public class HPBarManager : MonoBehaviour
 
     void Update()
     {
-        if (progressBar.value == 0)
+        var root = UIDocument.rootVisualElement;
+        EXPBar = root.Q<ProgressBar>("UserEXP");
+        EXPBar.value = PlayerState.PlayerEXP;
+        var EXP = EXPBar.Q<Label>();
+        EXP.text = EXPBar.value.ToString();
+
+        if (HPBar.value == 0)
         {
             // objectToDisable를 비활성화합니다.
             objectToDisable.SetActive(false);

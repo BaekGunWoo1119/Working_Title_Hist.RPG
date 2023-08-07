@@ -31,6 +31,18 @@ public class StateView : MonoBehaviour
         var groupBox = root.Q<GroupBox>("Result");
         var groupBox2 = root.Q<GroupBox> ("LvResult");
 
+        //Plus Button 가져오기
+        var HpPlus = root.Q<Button>("HPPlus");
+        var PwPlus = root.Q<Button>("PowerPlus");
+        var AsPlus = root.Q<Button>("ASPlus");
+        var DefPlus = root.Q<Button>("DEFPlus");
+
+        //Button 핸들러 등록
+        HpPlus.clicked += HpClick;
+        PwPlus.clicked += PwClick;
+        AsPlus.clicked += AsClick;
+        DefPlus.clicked += DefClick;
+
         // 변수 값을 표시할 Label 생성
         HPLabel = new Label();
         PowerLabel = new Label();
@@ -59,6 +71,54 @@ public class StateView : MonoBehaviour
         groupBox2.Add(ExpLabel);
         groupBox2.Add(SkillptLabel);
 
+        //셀렉트 창 비활성화
+
+        if (SkillPt > 0)
+        {
+            var SelBox = uidocument.rootVisualElement.Q<VisualElement>("LevelUpSelect");
+            //추후 스킬 완성되면 스킬 트리 추가 예정. USS는 제작 완료
+        }
+    }
+
+    void HpClick()
+    {
+        if (PlayerState.SkillPoint > 0)
+        {
+            PlayerState.PlayerHP += 100;
+            PlayerState.SkillPoint -= 1;
+
+        }
+    }
+    void PwClick()
+    {
+        if (PlayerState.SkillPoint > 0)
+        {
+            PlayerState.PlayerATK += 100;
+            PlayerState.SkillPoint -= 1;
+        }
+    }
+
+    void AsClick()
+    {
+        if (PlayerState.SkillPoint > 0)
+        {
+            PlayerState.PlayerATK_Rate += 100;
+            PlayerState.SkillPoint -= 1;
+        }
+    }
+
+    void DefClick()
+    {
+        if (PlayerState.SkillPoint > 0)
+        {
+            PlayerState.PlayerDEF += 100;
+            PlayerState.SkillPoint -= 1;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         // 변수 값 설정
         HP = PlayerState.PlayerHP;
         Power = PlayerState.PlayerATK;
@@ -77,19 +137,6 @@ public class StateView : MonoBehaviour
         LvLabel.text = Lv.ToString();
         ExpLabel.text = Exp.ToString();
         SkillptLabel.text = SkillPt.ToString();
-        
-        //셀렉트 창 비활성화
 
-        if (SkillPt > 0)
-        {
-            var SelBox = uidocument.rootVisualElement.Q<VisualElement>("LevelUpSelect");
-            //추후 스킬 완성되면 스킬 트리 추가 예정. USS는 제작 완료
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

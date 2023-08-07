@@ -26,7 +26,7 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        GameObject Monster = pool.Get(Random.Range(0, 2));
+        GameObject Monster = pool.Get(Random.Range(0, 3));
         Monster.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].transform.position;
     }
 }

@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8478798756458582295}
   m_Layer: 0
   m_Name: B_Skill
-  m_TagString: Arrow
+  m_TagString: Skill
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ Transform:
   m_Children:
   - {fileID: 588465827070084947}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!65 &4547515112147718764
 BoxCollider:
@@ -137,8 +137,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.055162407, y: 1.8653889, z: 0.13064308}
-  m_Center: {x: -0.004159864, y: -0.06391537, z: -0.0009337291}
+  m_Size: {x: 0.5014491, y: 0.4679233, z: 1.7918605}
+  m_Center: {x: -0.039870758, y: 0.030710883, z: -0.06343106}
 --- !u!54 &2957862696531956075
 Rigidbody:
   m_ObjectHideFlags: 0
