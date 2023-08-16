@@ -58,60 +58,70 @@
     <Analyzer Include="G:\Unity\2022.2.11f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\02.Scripts\CameraCtrl.cs" />
+    <Compile Include="Assets\02.Scripts\BossSpawn.cs" />
     <Compile Include="Assets\02.Scripts\PlayerMove -KeyboardTest.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\OpenMenu.cs" />
     <Compile Include="Assets\02.Scripts\Weapon\Weapon_Spear.cs" />
     <Compile Include="Assets\02.Scripts\E_ArrowCtrl.cs" />
-    <Compile Include="Assets\02.Scripts\Weapon\Weapon_Sword.cs" />
     <Compile Include="Assets\02.Scripts\BossCtrl.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\HPBarManager.cs" />
-    <Compile Include="Assets\02.Scripts\P_SpawnPoint.cs" />
+    <Compile Include="Assets\DizzyMedia\_Utilities\Camera\ExtendedFlycam.cs" />
     <Compile Include="Assets\02.Scripts\P_ArrowCtrl.cs" />
-    <Compile Include="Assets\02.Scripts\MainScene_Camera.cs" />
+    <Compile Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\LP Sets_AdvCharGenerator\Scripts\Components\LPS_AdvCharGen.cs" />
     <Compile Include="Assets\02.Scripts\Weapon\WeaponCtrl.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-    <Compile Include="Assets\02.Scripts\S_EnemyCtrl.cs" />
     <Compile Include="Assets\02.Scripts\B_EnemyCtrl.cs" />
     <Compile Include="Assets\02.Scripts\GIma_EnemyCtrl.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Examples\JoystickPlayerExample.cs" />
-    <Compile Include="Assets\02.Scripts\Timer.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\RetryBtn.cs" />
     <Compile Include="Assets\02.Scripts\RE_PoolManager.cs" />
     <Compile Include="Assets\02.Scripts\Spawner.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\StateView.cs" />
     <Compile Include="Assets\02.Scripts\PlayerAnim.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\InCounterManager.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick(2)\VirtualJoystick.cs" />
     <Compile Include="Assets\02.Scripts\GameManager.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\ScriptManager.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Base\Joystick.cs" />
-    <Compile Include="Assets\02.Scripts\WeaponBoxManager.cs" />
     <Compile Include="Assets\02.Scripts\ArrowCtrl.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\StartGame.cs" />
     <Compile Include="Assets\02.Scripts\SkillCtrl.cs" />
-    <Compile Include="Assets\02.Scripts\Reposition.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\GameSet_Open.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\SelectMenuManager.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\E_HPBarManager.cs" />
-    <Compile Include="Assets\02.Scripts\UI&amp;UX\ClickButton.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\OpenState.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\CloseMenu.cs" />
     <Compile Include="Assets\02.Scripts\EffectManager.cs" />
     <Compile Include="Assets\02.Scripts\PlayerState.cs" />
     <Compile Include="Assets\02.Scripts\Weapon\Weapon_Bow.cs" />
-    <Compile Include="Assets\02.Scripts\PoolManager.cs" />
+    <Compile Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\Scripts\Misc\LPS_RotateObject.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\02.Scripts\CameraCtrl.cs" />
+    <Compile Include="Assets\02.Scripts\Weapon\Weapon_Sword.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\HPBarManager.cs" />
+    <Compile Include="Assets\02.Scripts\P_SpawnPoint.cs" />
+    <Compile Include="Assets\02.Scripts\MainScene_Camera.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\02.Scripts\S_EnemyCtrl.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\02.Scripts\Timer.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\RetryBtn.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick(2)\VirtualJoystick.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
+    <Compile Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\LP Sets_AdvCharGenerator\Scripts\Helpers\Misc\LPS_ManualRotate.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Base\Joystick.cs" />
+    <Compile Include="Assets\02.Scripts\WeaponBoxManager.cs" />
+    <Compile Include="Assets\02.Scripts\Reposition.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\GameSet_Open.cs" />
+    <Compile Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\LP Sets_AdventureCharacters\Scripts\Demo\LPS_AdvChar_Demo.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\SelectMenuManager.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\E_HPBarManager.cs" />
+    <Compile Include="Assets\02.Scripts\UI&amp;UX\ClickButton.cs" />
+    <Compile Include="Assets\02.Scripts\PoolManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\02.Scripts\Scenario\Example.txt" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Main Menu Style.uss" />
+    <None Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\LP Sets_AdvCharGenerator\Docs\Instructions.txt" />
+    <None Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\LP Sets_AdventureForest\Docs\Instructions.txt" />
+    <None Include="Assets\DizzyMedia\Resources\Shaders\Double Sided\Standard_Two_Sided.shader" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Script UI Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Incounter UI.uxml" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Opning UI.uxml" />
+    <None Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\LP Sets_AdventureCharacters\Docs\Instructions.txt" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\MainScene UI Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Ending UI.uxml" />
     <None Include="Assets\02.Scripts\UI&amp;UX\Joystick(2)\VirtualJoystick.uxml" />
@@ -126,10 +136,13 @@
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Script UI.uxml" />
     <None Include="Assets\04.Images\Material\Particle Resource\Add_Shader.shader" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Ending UI Style.uss" />
+    <None Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\Docs\Instructions.txt" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Opening UI Style.uss" />
     <None Include="Assets\05.Models\Download\WPG_SwordFantasyPack\Documentation.txt" />
+    <None Include="Assets\Hovl Studio\Magic effects pack\Demo scene\Readme.txt" />
     <None Include="Assets\02.Scripts\UI&amp;UX\USS\Main UI Style.uss" />
     <None Include="Assets\02.Scripts\UI&amp;UX\UXML\Menu UI Document.uxml" />
+    <None Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\LP Sets_AdventureForest\Docs\Changelog.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -750,17 +763,32 @@
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.AI.Navigation">
-      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation">
+      <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
     </Reference>
     <Reference Include="Unity.AI.Navigation.Updater">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
@@ -783,11 +811,20 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualEffectGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

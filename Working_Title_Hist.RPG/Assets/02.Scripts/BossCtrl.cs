@@ -1,59 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
-
 
 public class BossCtrl : MonoBehaviour
 {
-    public GameObject Boss;
-    public Transform BossSpawnerTr;
-    // Update is called once per frame
+    public GameObject bulletPrefab;  // 보스 총알 프리팹
+    public int numBullets = 8;       // 총알 개수
+    public float bulletSpeed = 10f;  // 총알 속도
 
-    //체력바 코드
-    public UIDocument UIDocument;
-    private ProgressBar progressBar;
-    private float currentValue = 0f;
-    private float maxValue = 100f;
+    public float rotationSpeed = 180f; // 회전 속도 (도는 속도)
+    public float damage = 20f;         // 공격 데미지
+    public float moveSpeed = 2f;
+    private Vector3 initialPosition;
+    private float angle = 0f;
+    private Transform player;
+
 
     private void Start()
     {
-        BossSpawnerTr = GameObject.Find("BossSpawner").GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        initialPosition = transform.position;
     }
-    
-    //체력바 관련 코드 나중에 날려도 됨
-    void OnEnable()
+    private void Update()
     {
-        var root = UIDocument.rootVisualElement;
-        progressBar = root.Q<ProgressBar>("BossHP");
-        var Label = progressBar.Q<Label>();
-        //보스 체력바 처음엔 비활성화
-        progressBar.style.display = DisplayStyle.None;
-
-        // 초기 값 설정
-        currentValue = maxValue;
-        progressBar.value = maxValue;
-        Label.text = progressBar.value.ToString();
-    }
-
-    void BossDamaged()
-    {
-        currentValue -= 10.0f;
-    }
-
-    void Update()
-    {
-        if (Timer.Min == 1 && Timer.Sec == 0)
+        Vector3 directionToPlayer = player.position - transform.position;
+        directionToPlayer.y = 0;
+        transform.position += directionToPlayer.normalized * moveSpeed * Time.deltaTime;
+        RotateAndAttack();
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("보스 소환!");
-            Instantiate(Boss, BossSpawnerTr.position, BossSpawnerTr.rotation);
-            progressBar.style.display = DisplayStyle.Flex;
+            Shoot();
         }
-
-        if (Timer.Min == 1 && Timer.Sec == 3 && currentValue == 0)
+        if (Input.GetMouseButton(1))
         {
-            GameManager.BossDead();
         }
+    }
+    private void Shoot()
+    {
+        float angleStep = 360f / numBullets; // 각도 간격 계산
+
+        for (int i = 0; i < numBullets; i++)
+        {
+            float angle = i * angleStep; // 현재 총알의 각도 계산
+            Quaternion rotation = Quaternion.Euler(0f, angle, 0f); // 각도에 대한 회전
+
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, rotation);
+            Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+            bulletRb.velocity = bullet.transform.forward * bulletSpeed;
+        }
+    }
+
+    private void RotateAndAttack()
+    {
+        angle += rotationSpeed * Time.deltaTime;
+        if (angle >= 360f)
+            angle -= 360f;
+
+        Quaternion newRotation = Quaternion.Euler(0f, angle, 0f);
+        transform.rotation = newRotation;
     }
 }
