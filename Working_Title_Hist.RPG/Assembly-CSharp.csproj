@@ -102,6 +102,7 @@
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick(2)\VirtualJoystick.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\LP Sets_AdvCharGenerator\Scripts\Helpers\Misc\LPS_ManualRotate.cs" />
+    <Compile Include="Assets\02.Scripts\DestroyEffect.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\02.Scripts\WeaponBoxManager.cs" />
     <Compile Include="Assets\02.Scripts\Reposition.cs" />

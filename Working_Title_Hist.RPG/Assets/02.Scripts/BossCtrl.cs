@@ -4,59 +4,137 @@ using UnityEngine;
 
 public class BossCtrl : MonoBehaviour
 {
-    public GameObject bulletPrefab;  // ∫∏Ω∫ √—æÀ «¡∏Æ∆’
-    public int numBullets = 8;       // √—æÀ ∞≥ºˆ
-    public float bulletSpeed = 10f;  // √—æÀ º”µµ
+    public GameObject bulletPrefab;
+    public GameObject AngryEffect;
+    public int numBullets = 8;       
+    public float bulletSpeed = 10f;  
 
-    public float rotationSpeed = 180f; // »∏¿¸ º”µµ (µµ¥¬ º”µµ)
-    public float damage = 20f;         // ∞¯∞› µ•πÃ¡ˆ
+    public float rotationSpeed = 30.0f; 
+    public float damage = 20f;         
     public float moveSpeed = 2f;
     private Vector3 initialPosition;
     private float angle = 0f;
-    private Transform player;
 
+    private Transform playerTransform;
+    private Rigidbody rb;
 
-    private void Start()
+    public float chargeSpeed = 5.0f;
+
+    void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody>();
         initialPosition = transform.position;
+
+        StartCoroutine(Think());
     }
-    private void Update()
+    void Update()
     {
-        Vector3 directionToPlayer = player.position - transform.position;
-        directionToPlayer.y = 0;
-        transform.position += directionToPlayer.normalized * moveSpeed * Time.deltaTime;
-        RotateAndAttack();
-        if (Input.GetMouseButtonDown(0))
+        Debug.Log(Vector3.Distance(transform.position, playerTransform.position));
+    }
+
+    IEnumerator Think()
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        int ranAction = Random.Range(0, 5);
+        switch (ranAction)
         {
-            Shoot();
-        }
-        if (Input.GetMouseButton(1))
-        {
+            case 0:
+            case 1:
+                StartCoroutine(SwingAttack());
+                break;
+            case 2:
+                StartCoroutine(RushAttack());
+                break;
+            case 3:
+                StartCoroutine(ShootAttack());
+                break;
+            case 4:
+                StartCoroutine(JumpAttack());
+                break;
         }
     }
-    private void Shoot()
+
+    IEnumerator SwingAttack()
     {
-        float angleStep = 360f / numBullets; // ∞¢µµ ∞£∞› ∞ËªÍ
+        yield return new WaitForSeconds(0.2f);
+
+        Debug.Log("Î≥¥Ïä§ : ÌöåÏ†ÑÍ≥µÍ≤©");
+        float elapsedTime = 0.0f; // Í≤ΩÍ≥º ÏãúÍ∞Ñ
+
+        while (elapsedTime < 5.0f)
+        {
+            // Î¨ºÏ≤¥Î•º ÌöåÏ†ÑÌï©ÎãàÎã§.
+            transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        
+        StartCoroutine(Think());
+    }
+
+    IEnumerator RushAttack()
+    {
+        yield return new WaitForSeconds(0.2f);
+        Instantiate(AngryEffect, transform.position, transform.rotation);
+        yield return new WaitForSeconds(2.0f);
+
+        Debug.Log("Î≥¥Ïä§ : ÎèåÏßÑÍ≥µÍ≤©");
+
+        Vector3 targetPosition = playerTransform.position - (playerTransform.forward * 2.0f);
+
+        Vector3 direction = (targetPosition - transform.position).normalized;
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        transform.rotation = targetRotation;
+        float startTime = Time.time;
+
+        while (Time.time - startTime < 1.5f)
+        {
+            rb.AddForce(direction * chargeSpeed);
+            yield return null;
+        }
+
+        rb.velocity = Vector3.zero;
+
+        yield return new WaitForSeconds(1.0f);
+        StartCoroutine(Think());
+    }
+
+    IEnumerator ShootAttack()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        Debug.Log("Î≥¥Ïä§ : Î∞úÏÇ¨Í≥µÍ≤©");
+
+        Vector3 playerDirection = playerTransform.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(playerDirection);
+
+        float angleStep = 180f / numBullets; 
 
         for (int i = 0; i < numBullets; i++)
         {
-            float angle = i * angleStep; // «ˆ¿Á √—æÀ¿« ∞¢µµ ∞ËªÍ
-            Quaternion rotation = Quaternion.Euler(0f, angle, 0f); // ∞¢µµø° ¥Î«— »∏¿¸
+            float angle = i * angleStep; 
+            Quaternion rotation = Quaternion.Euler(0f, angle, 0f) * lookRotation; // ÌîåÎ†àÏù¥Ïñ¥ Î∞©Ìñ•ÏùÑ Ï∂îÍ∞ÄÌïú ÌöåÏ†ÑÍ∞í
+            rotation *= Quaternion.Euler(0f, 270f, 0f); // yÏ∂ïÏúºÎ°ú 90ÎèÑ ÌöåÏ†Ñ
 
             GameObject bullet = Instantiate(bulletPrefab, transform.position, rotation);
+            yield return new WaitForSeconds(0.1f);
             Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
             bulletRb.velocity = bullet.transform.forward * bulletSpeed;
         }
+        
+        yield return new WaitForSeconds(1.0f);
+        StartCoroutine(Think());
     }
-
-    private void RotateAndAttack()
+    
+    IEnumerator JumpAttack()
     {
-        angle += rotationSpeed * Time.deltaTime;
-        if (angle >= 360f)
-            angle -= 360f;
 
-        Quaternion newRotation = Quaternion.Euler(0f, angle, 0f);
-        transform.rotation = newRotation;
+        Debug.Log("Î≥¥Ïä§ : Ï†êÌîÑÍ≥µÍ≤©");
+
+        yield return new WaitForSeconds(1.0f);
+        StartCoroutine(Think());
     }
 }

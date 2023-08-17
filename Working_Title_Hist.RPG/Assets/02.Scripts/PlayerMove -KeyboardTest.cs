@@ -107,14 +107,14 @@ public class PlayerMove : MonoBehaviour
             {
                 ATKDelay = 0;
                 StartCoroutine(PlayerAttack());
-                Debug.Log("공격");
+                //Debug.Log("공격");
 
                 Weapon_Sword.Use();
             }
             if (WeaponCtrl.type == WeaponCtrl.Weapon_Type.BOW)
             {
                 ATKDelay = 0;
-                Debug.Log("공격");
+                //Debug.Log("공격");
                 Weapon_Bow.Use();
             }
         }

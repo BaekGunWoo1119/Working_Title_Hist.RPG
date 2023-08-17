@@ -51,7 +51,7 @@ public class PlayerState : MonoBehaviour
 
         LevelUp();
 
-        Debug.Log(PlayerEXP);
+        //Debug.Log(PlayerEXP);
     }
 
     void OnTriggerEnter(Collider other) 
@@ -122,7 +122,7 @@ public class PlayerState : MonoBehaviour
     {
         if(PlayerLevel == 10)
         {
-            //¿À·ù ¶°¼­ ÀÓÀÇ·Î ³Ö¾îµÒ
+            //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½Ö¾ï¿½ï¿½
             yield return new WaitForSeconds(0.0f);
         }
     }

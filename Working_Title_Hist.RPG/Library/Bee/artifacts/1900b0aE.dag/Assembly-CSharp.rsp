@@ -355,6 +355,7 @@
 "Assets/02.Scripts/BossSpawn.cs"
 "Assets/02.Scripts/B_EnemyCtrl.cs"
 "Assets/02.Scripts/CameraCtrl.cs"
+"Assets/02.Scripts/DestroyEffect.cs"
 "Assets/02.Scripts/EffectManager.cs"
 "Assets/02.Scripts/E_ArrowCtrl.cs"
 "Assets/02.Scripts/GameManager.cs"

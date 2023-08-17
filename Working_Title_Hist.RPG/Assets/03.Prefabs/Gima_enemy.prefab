@@ -1618,6 +1618,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3138152987046907677}
   - component: {fileID: 4359777562639132838}
+  - component: {fileID: 187131147800602432}
+  - component: {fileID: 5941068906645823073}
   m_Layer: 0
   m_Name: Gima_enemy
   m_TagString: Enemy
@@ -1655,6 +1657,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   Rushspeed: 25
+  HP: 100
+  MaxHP: 100
+  DEF: 5
+--- !u!65 &187131147800602432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207691276016407732}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.1935148, y: 7.3871183, z: 4.8926806}
+  m_Center: {x: -0.14825797, y: 3.6653762, z: 1.7589118}
+--- !u!54 &5941068906645823073
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207691276016407732}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2218416560452523869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5440,11 +5493,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4714532208652031810}
   - component: {fileID: 796656395390029260}
-  - component: {fileID: 2202333587376600425}
-  - component: {fileID: 9092317003536960044}
+  - component: {fileID: 4052090997998651738}
   m_Layer: 0
   m_Name: Horse
-  m_TagString: Untagged
+  m_TagString: E_Spear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5488,7 +5540,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &2202333587376600425
+--- !u!65 &4052090997998651738
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5507,35 +5559,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.2224144, z: 1.7032118}
-  m_Center: {x: 0, y: 0.58302444, z: 0.16417776}
---- !u!54 &9092317003536960044
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7254914741802152167}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Size: {x: 0.5364144, y: 1.8690511, z: 1.8792398}
+  m_Center: {x: 0.014520049, y: 0.90634257, z: 0.17704597}
 --- !u!1 &7268578553091887357
 GameObject:
   m_ObjectHideFlags: 0
@@ -6275,7 +6300,7 @@ GameObject:
   - component: {fileID: 1000777785433576694}
   m_Layer: 0
   m_Name: Human
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

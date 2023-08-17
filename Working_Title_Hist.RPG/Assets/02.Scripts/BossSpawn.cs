@@ -11,7 +11,6 @@ public class BossSpawn : MonoBehaviour
     public Transform BossSpawnerTr;
     // Update is called once per frame
 
-    //Ã¼·Â¹Ù ÄÚµå
     public UIDocument UIDocument;
     private ProgressBar progressBar;
     private float currentValue = 0f;
@@ -23,16 +22,13 @@ public class BossSpawn : MonoBehaviour
         BossSpawnerTr = GameObject.Find("BossSpawner").GetComponent<Transform>();
     }
     
-    //Ã¼·Â¹Ù °ü·Ã ÄÚµå ³ªÁß¿¡ ³¯·Áµµ µÊ
     void OnEnable()
     {
         var root = UIDocument.rootVisualElement;
         progressBar = root.Q<ProgressBar>("BossHP");
         var Label = progressBar.Q<Label>();
-        //º¸½º Ã¼·Â¹Ù Ã³À½¿£ ºñÈ°¼ºÈ­
         progressBar.style.display = DisplayStyle.None;
 
-        // ÃÊ±â °ª ¼³Á¤
         currentValue = maxValue;
         progressBar.value = maxValue;
         Label.text = progressBar.value.ToString();
@@ -45,9 +41,9 @@ public class BossSpawn : MonoBehaviour
 
     void Update()
     {
-        if (Timer.Min == 1 && Timer.Sec == 0)
+        if (Timer.Min == 0 && Timer.Sec == 0)
         {
-            Debug.Log("º¸½º ¼ÒÈ¯!");
+            Debug.Log("ë³´ìŠ¤ ì†Œí™˜");
             Instantiate(Boss, BossSpawnerTr.position, BossSpawnerTr.rotation);
             progressBar.style.display = DisplayStyle.Flex;
         }
