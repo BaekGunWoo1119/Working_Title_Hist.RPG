@@ -17,30 +17,30 @@
                     {
                         "m_StyleSheet": {
                             "fileID": 7433441132597879392,
-                            "guid": "efe3847ba40f0ec4e967138c88543cd5",
+                            "guid": "1555c488f6afbd642aec563f4d498bf4",
                             "type": 3
                         },
                         "m_BackupStyleSheet": {
                             "instanceID": 0
                         },
-                        "m_OldPath": "Assets/02.Scripts/UI&UX/USS/Main UI Style.uss"
+                        "m_OldPath": "Assets/02.Scripts/UI&UX/USS/MainScene UI Style.uss"
                     }
                 ],
                 "m_VisualTreeAssetBackup": {
                     "instanceID": 0
                 },
-                "m_OpenendVisualTreeAssetOldPath": "Assets/02.Scripts/UI&UX/UXML/Main UI Document.uxml",
+                "m_OpenendVisualTreeAssetOldPath": "Assets/02.Scripts/UI&UX/UXML/Select UI.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "49eb0da8d69dc88478be29b5ecbf357d",
+                    "guid": "b8b7fbd3ec81fd04ea87fefa184dc004",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
                     "instanceID": 0
                 },
                 "m_Settings": {
-                    "UxmlGuid": "49eb0da8d69dc88478be29b5ecbf357d",
-                    "UxmlPath": "Assets/02.Scripts/UI&UX/UXML/Main UI Document.uxml",
+                    "UxmlGuid": "b8b7fbd3ec81fd04ea87fefa184dc004",
+                    "UxmlPath": "Assets/02.Scripts/UI&UX/UXML/MainScene UI.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,
                     "CanvasWidth": 1920,
@@ -48,8 +48,8 @@
                     "MatchGameView": false,
                     "ZoomScale": 0.25,
                     "PanOffset": {
-                        "x": 22.5714111328125,
-                        "y": 18.28570556640625
+                        "x": 143.60714721679688,
+                        "y": 102.23809814453125
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,

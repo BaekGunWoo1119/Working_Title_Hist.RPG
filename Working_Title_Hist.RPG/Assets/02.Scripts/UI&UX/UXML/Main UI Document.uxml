@@ -3,20 +3,24 @@
     <ui:VisualElement name="Container">
         <ui:VisualElement name="LeftPanel">
             <ui:VisualElement name="LeftTopPanel" style="background-image: none;">
-                <ui:Button text="Button" display-tooltip-when-elided="true" name="UserInfo" />
-                <ui:ProgressBar name="UserHP" value="100" title="my-progress" />
-                <ui:ProgressBar name="UserEXP" value="100" title="my-progress" />
+                <ui:Button display-tooltip-when-elided="true" name="UserInfo" style="background-image: url(&apos;project://database/Assets/04.Images/UserState.psd?fileID=2800000&amp;guid=9c2aee75277d3ed4fa550efe2f872953&amp;type=3#UserState&apos;); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0;">
+                    <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="UserClass" style="background-image: url(&apos;project://database/Assets/04.Images/Char_Standard_Img.png?fileID=2800000&amp;guid=7e521bddb5f35194cb699c27f6a65f8b&amp;type=3#Char_Standard_Img&apos;);" />
+                    <ui:VisualElement name="UserBar" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+                        <ui:ProgressBar name="UserHP" value="100" title="my-progress" />
+                        <ui:ProgressBar name="UserEXP" value="100" title="my-progress" />
+                    </ui:VisualElement>
+                </ui:Button>
             </ui:VisualElement>
             <ui:VisualElement name="LeftBottomPanel">
-                <ui:VisualElement name="Joystick" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; border-bottom-width: 10px; bottom: 5%; position: absolute; left: 5%;">
-                    <ui:VisualElement name="JoystickBack" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Scripts/UI&amp;UX/Joystick%20Pack/Sprites/All%20Axis%20Backgrounds/AllAxis_Outline_Arrows.png?fileID=2800000&amp;guid=48c0d4d6bebaa934384b07aa1e2f8184&amp;type=3#AllAxis_Outline_Arrows&apos;); width: 256px; height: 256px; flex-shrink: 0; -unity-background-image-tint-color: rgba(219, 140, 63, 0.66);">
-                        <ui:VisualElement name="JoystickHandle" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Scripts/UI&amp;UX/Joystick%20Pack/Sprites/All%20Axis%20Backgrounds/AllAxis_Ridged.png?fileID=2800000&amp;guid=54628aafa20f64b40ae661038ee7abf0&amp;type=3#AllAxis_Ridged&apos;); width: 128px; height: 128px; flex-shrink: 0; top: 25%; left: 25%; transition-property: all, translate; transition-duration: 0s, 0.1s; transition-timing-function: ease, ease; transition-delay: 0s, 0s; -unity-background-image-tint-color: rgba(219, 140, 63, 0.66);" />
+                <ui:VisualElement name="Joystick" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); flex-shrink: 0; border-bottom-width: 10px; bottom: 5%; position: absolute; left: 5%; height: 450px; width: 450px;">
+                    <ui:VisualElement name="JoystickBack" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Scripts/UI&amp;UX/Joystick%20Pack/Sprites/All%20Axis%20Backgrounds/AllAxis_Outline_Arrows.png?fileID=2800000&amp;guid=48c0d4d6bebaa934384b07aa1e2f8184&amp;type=3#AllAxis_Outline_Arrows&apos;); width: 450px; height: 450px; flex-shrink: 0; -unity-background-image-tint-color: rgba(219, 140, 63, 0.66);">
+                        <ui:VisualElement name="JoystickHandle" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/02.Scripts/UI&amp;UX/Joystick%20Pack/Sprites/All%20Axis%20Backgrounds/AllAxis_Ridged.png?fileID=2800000&amp;guid=54628aafa20f64b40ae661038ee7abf0&amp;type=3#AllAxis_Ridged&apos;); width: 230px; height: 230px; flex-shrink: 0; top: 25%; left: 25%; transition-property: all, translate; transition-duration: 0s, 0.1s; transition-timing-function: ease, ease; transition-delay: 0s, 0s; -unity-background-image-tint-color: rgba(219, 140, 63, 0.66);" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="MiddlePanel">
-            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="TimerText" style="-unity-text-align: upper-center;" />
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="TimerText" style="-unity-text-align: upper-center; height: 242px;" />
             <ui:ProgressBar value="22" title="BossHP" name="BossHP" />
         </ui:VisualElement>
         <ui:VisualElement name="RightPanel">
@@ -24,8 +28,8 @@
                 <ui:Button display-tooltip-when-elided="true" name="MenuOpen" class="menu_open" style="background-image: url(&apos;project://database/Assets/04.Images/menu_background.png?fileID=2800000&amp;guid=bfc50d7f7a981264bab577a948d5ce16&amp;type=3#menu_background&apos;); background-color: rgba(255, 255, 255, 0);" />
             </ui:VisualElement>
             <ui:VisualElement name="RightBottomPanel">
-                <ui:Button display-tooltip-when-elided="true" name="Attack" class="general2" />
-                <ui:Button display-tooltip-when-elided="true" class="general2" />
+                <ui:Button display-tooltip-when-elided="true" name="Attack" class="general2" style="background-image: url(&apos;project://database/Assets/04.Images/Skill1Btn.psd?fileID=2800000&amp;guid=c4c99d68cc6aa1942845d208c0163775&amp;type=3#Skill1Btn&apos;); background-color: rgba(0, 0, 0, 0.78); -unity-text-outline-color: rgba(0, 0, 0, 0);" />
+                <ui:Button display-tooltip-when-elided="true" class="general2" style="background-image: url(&apos;project://database/Assets/04.Images/Skill2Btn.psd?fileID=2800000&amp;guid=81dfcd6ebf50c08498bb40c5e926482b&amp;type=3#Skill2Btn&apos;); background-color: rgba(0, 0, 0, 0.78);" />
                 <ui:Button display-tooltip-when-elided="true" class="general2" />
                 <ui:Button display-tooltip-when-elided="true" class="general2" />
             </ui:VisualElement>

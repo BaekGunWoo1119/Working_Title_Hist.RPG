@@ -20,6 +20,8 @@ public class BossCtrl : MonoBehaviour
 
     public float chargeSpeed = 5.0f;
 
+    public Animator animator;
+
     void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -82,7 +84,7 @@ public class BossCtrl : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         Debug.Log("보스 : 돌진공격");
-
+        animator.SetBool("Run", true);
         Vector3 targetPosition = playerTransform.position - (playerTransform.forward * 2.0f);
 
         Vector3 direction = (targetPosition - transform.position).normalized;
@@ -99,6 +101,7 @@ public class BossCtrl : MonoBehaviour
         rb.velocity = Vector3.zero;
 
         yield return new WaitForSeconds(1.0f);
+        animator.SetBool("Run", false);
         StartCoroutine(Think());
     }
 

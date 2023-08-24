@@ -2069,7 +2069,7 @@ Animator:
   m_GameObject: {fileID: 8061654117059054286}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: dae1b2a630c2103408eac1778b720b71, type: 3}
-  m_Controller: {fileID: 9100000, guid: 75cabacce08bf8742838e3b2c01b2166, type: 2}
+  m_Controller: {fileID: 9100000, guid: 97072d6d3a084534ea496e2fc93827bb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2092,14 +2092,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68880c86001ccdb4882342ee505d8ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8543931987725838434, guid: 6c2dcb65cd0fc324883024db385c29ab, type: 3}
+  bulletPrefab: {fileID: 2484405550448037248, guid: 19cc46efae0461e44b412905532c9b51, type: 3}
   AngryEffect: {fileID: 3465184456193066126, guid: 2ae230c6c08346a4cb92896ada1db6db, type: 3}
   numBullets: 8
   bulletSpeed: 10
-  rotationSpeed: 180
+  rotationSpeed: 540
   damage: 20
   moveSpeed: 2
   chargeSpeed: 10
+  animator: {fileID: 3624064872403388942}
 --- !u!54 &8207071873686893957
 Rigidbody:
   m_ObjectHideFlags: 0

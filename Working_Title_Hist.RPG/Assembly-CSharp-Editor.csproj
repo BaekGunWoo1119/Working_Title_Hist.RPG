@@ -63,8 +63,6 @@
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
     <Compile Include="Assets\02.Scripts\UI&amp;UX\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
-    <Compile Include="Assets\DizzyMedia\Editor\Scripts\WelcomeScreen.cs" />
-    <Compile Include="Assets\DizzyMedia\_Assets\LP Sets_AdventurePack\Scripts\Editor\LPS_AdvPack_Welcome.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

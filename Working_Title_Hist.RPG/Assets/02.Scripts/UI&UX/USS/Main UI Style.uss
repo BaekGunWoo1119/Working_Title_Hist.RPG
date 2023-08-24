@@ -69,8 +69,7 @@
 {
 	width: 100%;
 	height: 50%;
-	padding-top: 180px;
-	padding-left: 250px;
+	padding-left: 70px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -80,8 +79,8 @@
 
 .general1
 {
-	width: 200px;
-	height: 200px;
+	width: 180px;
+	height: 180px;
 	position: absolute;
 	left: 10%;
 	bottom: 10%;
@@ -96,8 +95,8 @@
 
 .general2
 {
-	width: 130px;
-	height: 130px;
+	width: 230px;
+	height: 230px;
 	margin: 20px;
 	position: relative;
 	border-radius: 50%;
@@ -116,12 +115,13 @@
 
 #UserInfo
 {
-	width: 70%;
-	height: 100px;
+	width: 100%;
+	height: 250px;
 	margin: 15px;
 	background-color: rgba(219, 140, 63, 0.66);
 	text-align: center;
-	border-radius: 8px;
+	border-radius: 50px;
+	flex-direction: row;
 }
 
 /* 타이머 설정*/
@@ -131,15 +131,32 @@
 	text-align: center;
 	font-size: 64px;
 	color: #fff;
+	background-image: url(../../../04.Images/Timer.psd);
+	padding-top: 100px;
 
+}/* 유저 클래스 */
+
+#UserClass
+{
+	width: 30%;
+	height: 90%;
+	border-radius: 30px;
 }
 
 /* 유저 체력바 및 경험치바 설정 */
 
+#UserBar
+{
+	width: 70%;
+	padding-top: 20px;
+	padding-left: 40px;
+	opacity: 0.5;
+}
+
 #UserHP,
 #UserEXP
 {
-	width: 70%;
+	width: 90%;
 	height: 65px; 
 	margin: 15px;
 }
@@ -153,7 +170,7 @@
 {
 	background-color: #546E7A;
 	padding: 30px;
-	border-radius: 8px;
+	border-radius: 20px;
 	border-width: none;
 } 
 
@@ -165,13 +182,15 @@
 #UserHP .unity-progress-bar__progress
 {
 	background-color: #008000;
-    border-radius: 8px;
+	background-image: url(../../../04.Images/UserHp.psd);
+    border-radius: 20px;
 }
 
 #UserEXP .unity-progress-bar__progress
 {
 	background-color: #0067A3;
-    border-radius: 8px;
+	background-image: url(../../../04.Images/UserEXP.psd);
+    border-radius: 20px;
 }
 
 /* 보스 체력바 설정*/
@@ -188,6 +207,7 @@
 #BossHP .unity-progress-bar__progress
 {
 	background-color: #FF0000;
+	background-image: url(../../../04.Images/BossHP.psd);
     border-radius: 8px;
 }
 

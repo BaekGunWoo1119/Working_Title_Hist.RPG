@@ -31,3 +31,18 @@
 	border-radius: 50px;
 	font-size: 50px;
 }
+
+#Bow
+{
+	background-image: url(../../../04.Images/Pick_Img_Bow.psd);
+}
+
+#Spear
+{
+	background-image: url(../../../04.Images/Pick_Img_Spear.psd);
+}
+
+#Sword
+{
+	background-image: url(../../../04.Images/Pick_Img_Sword.psd);
+}

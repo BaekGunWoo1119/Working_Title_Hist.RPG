@@ -367,8 +367,6 @@
 "Assets/02.Scripts/UI&UX/Joystick Pack/Scripts/Editor/JoystickEditor.cs"
 "Assets/02.Scripts/UI&UX/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs"
 "Assets/05.Models/Download/Low Poly Human/Characters/LowPoly/Editor/MaterialTilingOffset.cs"
-"Assets/DizzyMedia/Editor/Scripts/WelcomeScreen.cs"
-"Assets/DizzyMedia/_Assets/LP Sets_AdventurePack/Scripts/Editor/LPS_AdvPack_Welcome.cs"
 -langversion:9.0
 
 /deterministic

@@ -399,11 +399,7 @@
 "Assets/02.Scripts/Weapon/Weapon_Spear.cs"
 "Assets/02.Scripts/Weapon/Weapon_Sword.cs"
 "Assets/02.Scripts/WeaponBoxManager.cs"
-"Assets/DizzyMedia/_Assets/LP Sets_AdventurePack/LP Sets_AdvCharGenerator/Scripts/Components/LPS_AdvCharGen.cs"
-"Assets/DizzyMedia/_Assets/LP Sets_AdventurePack/LP Sets_AdvCharGenerator/Scripts/Helpers/Misc/LPS_ManualRotate.cs"
-"Assets/DizzyMedia/_Assets/LP Sets_AdventurePack/LP Sets_AdventureCharacters/Scripts/Demo/LPS_AdvChar_Demo.cs"
-"Assets/DizzyMedia/_Assets/LP Sets_AdventurePack/Scripts/Misc/LPS_RotateObject.cs"
-"Assets/DizzyMedia/_Utilities/Camera/ExtendedFlycam.cs"
+"Assets/05.Models/Download/EzTornado/Scripts/PerlinNoiseMesh.cs"
 -langversion:9.0
 
 /deterministic
