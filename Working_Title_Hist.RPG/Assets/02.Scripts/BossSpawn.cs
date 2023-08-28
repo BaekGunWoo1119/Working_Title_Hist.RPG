@@ -12,6 +12,7 @@ public class BossSpawn : MonoBehaviour
     // Update is called once per frame
 
     public UIDocument UIDocument;
+    public GameObject Scenario;
     private ProgressBar progressBar;
     private float currentValue = 0f;
     private float maxValue = 100f;
@@ -43,6 +44,7 @@ public class BossSpawn : MonoBehaviour
     {
         if (Timer.Min == 0 && Timer.Sec == 0)
         {
+            Scenario.SetActive(true);
             Debug.Log("보스 소환");
             Instantiate(Boss, BossSpawnerTr.position, BossSpawnerTr.rotation);
             progressBar.style.display = DisplayStyle.Flex;
@@ -51,6 +53,16 @@ public class BossSpawn : MonoBehaviour
         if (Timer.Min == 1 && Timer.Sec == 3 && currentValue == 0)
         {
             GameManager.BossDead();
+        }
+
+        if (Scenario.activeSelf)
+        {
+            Time.timeScale = 0.0f;
+        }
+
+        else
+        {
+            Time.timeScale = 1.0f;
         }
 
     }

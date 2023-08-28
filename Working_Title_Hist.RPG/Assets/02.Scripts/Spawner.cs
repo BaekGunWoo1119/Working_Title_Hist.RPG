@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     {
         SpawnTime += Time.deltaTime;
 
-        if(SpawnTime > 0.3f)
+        if(SpawnTime > 1.0f)
         {
             SpawnTime = 0;
             Spawn();

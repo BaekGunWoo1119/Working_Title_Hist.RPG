@@ -6,6 +6,7 @@ public class PlayerState : MonoBehaviour
 {
     
     public static float PlayerHP = 100.0f;
+    public static float PlayerNowHP = 100.0f;
     public static float PlayerATK = 100.0f;
     public static float PlayerATK_Rate = 1.0f;
     public static float PlayerDEF = 5.0f;
@@ -17,7 +18,7 @@ public class PlayerState : MonoBehaviour
 
     public static int PlayerLevel = 1;
     public static float PlayerEXP = 0.0f;
-    private float MaxEXP = 100.0f;
+    public static float MaxEXP = 50.0f;
     public static int SkillPoint = 0;
 
     public bool isFire = false;
@@ -51,7 +52,7 @@ public class PlayerState : MonoBehaviour
 
         LevelUp();
 
-        //Debug.Log(PlayerEXP);
+        Debug.Log(PlayerEXP);
     }
 
     void OnTriggerEnter(Collider other) 
@@ -92,8 +93,8 @@ public class PlayerState : MonoBehaviour
     {
         if (PlayerHP > 0)
         {
-            PlayerHP -= 10.0f;
-            Debug.Log(PlayerHP);
+            PlayerNowHP -= 10.0f;
+            Debug.Log(PlayerNowHP);
             HPBarManager.DamagedPlayer();
             yield return new WaitForSeconds(0.2f);
         }
@@ -110,11 +111,9 @@ public class PlayerState : MonoBehaviour
     {
         if(PlayerEXP >= MaxEXP)
         {
-            PlayerEXP -= MaxEXP;
+            MaxEXP += 50.0f;
             SkillPoint++;
             PlayerLevel++;
-
-            MaxEXP += 50.0f;
         }
     }
 

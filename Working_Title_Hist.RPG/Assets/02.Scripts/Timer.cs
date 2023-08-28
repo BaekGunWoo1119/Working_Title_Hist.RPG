@@ -23,7 +23,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         Sec += Time.deltaTime;
-        string timerText = string.Format("{0:D2}  :  {1:D2}", Min, (int)Sec);
+        string timerText = string.Format("{0:D2}   :   {1:D2}", Min, (int)Sec);
         timerLabel.text = timerText;
 
         if ((int)Sec > 59)

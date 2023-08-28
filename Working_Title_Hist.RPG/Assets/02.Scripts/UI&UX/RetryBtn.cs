@@ -12,15 +12,15 @@ public class RetryBtn : MonoBehaviour
 
     private void OnEnable()
     {
-        // UXML¿¡¼­ »ý¼ºÇÑ Button ¿ä¼Ò
+        // UXMLï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Button ï¿½ï¿½ï¿½
         uxmlButton = uiDocument.rootVisualElement.Q<Button>("Retry");
 
-        // Button Å¬¸¯ ÀÌº¥Æ®¿¡ ´ëÇÑ ÇÚµé·¯¸¦ µî·Ï
+        // Button Å¬ï¿½ï¿½ ï¿½Ìºï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Úµé·¯ï¿½ï¿½ ï¿½ï¿½ï¿½
         uxmlButton.clicked += OnButtonClick;
     }
     private void OnDisable()
     {
-        // ÇÚµé·¯¸¦ ÇØÁ¦
+        // ï¿½Úµé·¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (uxmlButton != null)
         {
             uxmlButton.clicked -= OnButtonClick;
@@ -29,13 +29,13 @@ public class RetryBtn : MonoBehaviour
 
     private void OnButtonClick()
     {
-        //°ÔÀÓÀ» ´Ù½Ã Àç»ý
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½
         Time.timeScale = 1.0f;
 
-        //Ã¼·Â ¿ø»óº¹±Í
+        //Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½óº¹±ï¿½
         PlayerState.PlayerHP = 100;
 
-        //¾À ¸®·Îµå
+        //ï¿½ï¿½ ï¿½ï¿½ï¿½Îµï¿½
         SceneManager.LoadScene("SampleScene");
     }
 }

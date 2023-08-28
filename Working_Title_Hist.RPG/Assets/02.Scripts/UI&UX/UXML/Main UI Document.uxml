@@ -20,7 +20,7 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="MiddlePanel">
-            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="TimerText" style="-unity-text-align: upper-center; height: 242px;" />
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="TimerText" style="-unity-text-align: upper-center; height: 242px; -unity-font: url(&apos;project://database/Assets/04.Images/Font/210%20JeongSock%20OTF%20B.otf?fileID=12800000&amp;guid=a81b0564aa058444ca8d315576c209de&amp;type=3#210 JeongSock OTF B&apos;); -unity-font-definition: url(&apos;project://database/Assets/04.Images/Font/210%20JeongSock%20OTF%20R%20SDF.asset?fileID=11400000&amp;guid=1ee2c41d57ae4234288b1fa28ac89416&amp;type=2#210 JeongSock OTF R SDF&apos;);" />
             <ui:ProgressBar value="22" title="BossHP" name="BossHP" />
         </ui:VisualElement>
         <ui:VisualElement name="RightPanel">

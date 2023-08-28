@@ -27,23 +27,23 @@ public class StateView : MonoBehaviour
         UIDocument uidocument = GameObject.Find("StateMenu").GetComponent<UIDocument>();
         var root = uidocument.rootVisualElement;
 
-        // Group Box °¡Á®¿À±â
+        // Group Box ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         var groupBox = root.Q<GroupBox>("Result");
         var groupBox2 = root.Q<GroupBox> ("LvResult");
 
-        //Plus Button °¡Á®¿À±â
+        //Plus Button ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         var HpPlus = root.Q<Button>("HPPlus");
         var PwPlus = root.Q<Button>("PowerPlus");
         var AsPlus = root.Q<Button>("ASPlus");
         var DefPlus = root.Q<Button>("DEFPlus");
 
-        //Button ÇÚµé·¯ µî·Ï
+        //Button ï¿½Úµé·¯ ï¿½ï¿½ï¿½
         HpPlus.clicked += HpClick;
         PwPlus.clicked += PwClick;
         AsPlus.clicked += AsClick;
         DefPlus.clicked += DefClick;
 
-        // º¯¼ö °ªÀ» Ç¥½ÃÇÒ Label »ý¼º
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ Label ï¿½ï¿½ï¿½ï¿½
         HPLabel = new Label();
         PowerLabel = new Label();
         SpeedLabel = new Label();
@@ -52,7 +52,7 @@ public class StateView : MonoBehaviour
         ExpLabel = new Label();
         SkillptLabel = new Label();
 
-        //»ö»ó ¼³Á¤
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         HPLabel.style.color = new StyleColor(Color.white);
         PowerLabel.style.color = new StyleColor(Color.white);
         SpeedLabel.style.color = new StyleColor(Color.white);
@@ -61,7 +61,7 @@ public class StateView : MonoBehaviour
         ExpLabel.style.color = new StyleColor(Color.white);
         SkillptLabel.style.color = new StyleColor(Color.white);
 
-        // Group Box¿¡ Label Ãß°¡
+        // Group Boxï¿½ï¿½ Label ï¿½ß°ï¿½
         groupBox.Add(HPLabel);
         groupBox.Add(PowerLabel);
         groupBox.Add(SpeedLabel);
@@ -71,12 +71,12 @@ public class StateView : MonoBehaviour
         groupBox2.Add(ExpLabel);
         groupBox2.Add(SkillptLabel);
 
-        //¼¿·ºÆ® Ã¢ ºñÈ°¼ºÈ­
+        //ï¿½ï¿½ï¿½ï¿½Æ® Ã¢ ï¿½ï¿½È°ï¿½ï¿½È­
 
         if (SkillPt > 0)
         {
             var SelBox = uidocument.rootVisualElement.Q<VisualElement>("LevelUpSelect");
-            //ÃßÈÄ ½ºÅ³ ¿Ï¼ºµÇ¸é ½ºÅ³ Æ®¸® Ãß°¡ ¿¹Á¤. USS´Â Á¦ÀÛ ¿Ï·á
+            //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å³ ï¿½Ï¼ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½Å³ Æ®ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½. USSï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½
         }
     }
 
@@ -85,6 +85,7 @@ public class StateView : MonoBehaviour
         if (PlayerState.SkillPoint > 0)
         {
             PlayerState.PlayerHP += 100;
+            PlayerState.PlayerNowHP += 100;
             PlayerState.SkillPoint -= 1;
 
         }
@@ -119,7 +120,7 @@ public class StateView : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // º¯¼ö °ª ¼³Á¤
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         HP = PlayerState.PlayerHP;
         Power = PlayerState.PlayerATK;
         Speed = PlayerState.PlayerATK_Rate;
@@ -128,7 +129,7 @@ public class StateView : MonoBehaviour
         Exp = PlayerState.PlayerEXP;
         SkillPt = PlayerState.SkillPoint;
 
-        // Label¿¡ º¯¼ö °ªÀ» Ç¥½Ã
+        // Labelï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
         HPLabel.text = HP.ToString();
         PowerLabel.text = Power.ToString();
         SpeedLabel.text = Speed.ToString();

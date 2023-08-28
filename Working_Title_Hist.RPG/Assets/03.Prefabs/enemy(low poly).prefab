@@ -2726,7 +2726,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 7619499764583592847}
   progressBarImage: {fileID: 1934477305393325519}
-  parentObject: {fileID: 7168160461201170918}
   canvas: {fileID: 4037386568627706030}
 --- !u!54 &2503028708462850461
 Rigidbody:
@@ -4766,7 +4765,7 @@ Transform:
   - {fileID: 188814155331479365}
   - {fileID: 7509845789145407912}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3913753331705891187
 Animator:
@@ -4777,7 +4776,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7653573539752932242}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 7966d979d9982a743a30e3b75a402b94, type: 3}
+  m_Avatar: {fileID: 9000000, guid: de13a7420582ded45a8d7d3f96889aca, type: 3}
   m_Controller: {fileID: 9100000, guid: a2793364e8d5574439447333ad1339f9, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0

@@ -19,6 +19,13 @@
 	height: 45%;
 }
 
+#Talker
+{
+	width: 30%;
+	height: 100%;
+	margin-left: 200px;
+}
+
 #Dialog
 {
 	width: 90%;

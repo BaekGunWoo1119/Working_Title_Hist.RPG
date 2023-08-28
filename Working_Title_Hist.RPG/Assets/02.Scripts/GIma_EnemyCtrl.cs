@@ -76,7 +76,7 @@ public class GIma_EnemyCtrl : MonoBehaviour
         {
             HP = (float)(HP - (PlayerState.PlayerATK * 0.75 - DEF * 0.75));
         }
-        //½ºÅ³ ºÎºÐ Ãß°¡
+        //ï¿½ï¿½Å³ ï¿½Îºï¿½ ï¿½ß°ï¿½
         if (col.gameObject.tag == "Skill")
         {
             HP = 0;

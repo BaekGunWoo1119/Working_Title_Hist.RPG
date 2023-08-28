@@ -36,7 +36,7 @@ public class PlayerMove : MonoBehaviour
         // Rigidbody�� �߷� �ɼ��� �̿��� Y�� �̵��� ����
         playerRigidbody.constraints = RigidbodyConstraints.FreezePositionY;
 
-        Weapon_Sword.traillEffect.enabled = false;
+        //Weapon_Sword.traillEffect.enabled = false;
         Weapon_Sword.Attack_Area.enabled = false;
     }
 
@@ -154,13 +154,13 @@ public class PlayerMove : MonoBehaviour
     {
         S_Skill2Delay = 0;
         Instantiate(S_Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.3f);
         Instantiate(S_Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.3f);
         Instantiate(S_Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.3f);
         Instantiate(S_Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.3f);
         Instantiate(S_Skill2prefab, SkillSpawn.transform.position, SkillSpawn.transform.rotation);
     }
 

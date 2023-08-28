@@ -27,11 +27,13 @@ public class B_EnemyCtrl : MonoBehaviour
     }
     void Update()
     {
+        Animator animator = this.GetComponent<Animator>();
         arrowCoolDown += Time.deltaTime;
         transform.LookAt(Playertr);
         if (Vector3.Distance(Playertr.position, transform.position) > 15.0f)
         {
             transform.position += transform.forward * speed * Time.deltaTime;
+            animator.SetBool("Run", true);
             //자연스러운 걸음을 위한 방향 조정
             Quaternion targetRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + 30f, transform.rotation.eulerAngles.z);
             transform.rotation = targetRotation;
@@ -46,6 +48,10 @@ public class B_EnemyCtrl : MonoBehaviour
             // 공격에 맞춰서 방향 전환
             Quaternion targetRotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + 60f, transform.rotation.eulerAngles.z);
             transform.rotation = targetRotation;
+        }
+        else
+        {
+            animator.SetBool("Run", false);
         }
     }
 

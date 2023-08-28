@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WeaponBoxManager : MonoBehaviour
 {
-    public Transform target; // µû¶ó°¥ ´ë»ó ¿ÀºêÁ§Æ®
-    public Vector3 offset = new Vector3(0f, 0f, 0f); // Ä«¸Þ¶ó¿Í ´ë»ó ¿ÀºêÁ§Æ® »çÀÌÀÇ °Å¸® ¹× ³ôÀÌ Á¶Àý
+    public Transform target; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public Vector3 offset = new Vector3(0f, 0f, 0f); // Ä«ï¿½Þ¶ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
     public static void WeaponRotate()
     {
@@ -18,10 +18,10 @@ public class WeaponBoxManager : MonoBehaviour
     {
         if (target != null)
         {
-            // Ä«¸Þ¶ó À§Ä¡¸¦ ´ë»ó ¿ÀºêÁ§Æ®ÀÇ À§Ä¡·Î ¼³Á¤ÇÏµÇ offset ¸¸Å­ ¶³¾îÁø À§Ä¡·Î ¼³Á¤
+            // Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ offset ï¿½ï¿½Å­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             transform.position = target.position + offset;
 
-            // Ä«¸Þ¶ó°¡ ´ë»ó ¿ÀºêÁ§Æ®¸¦ ¹Ù¶óº¸µµ·Ï ¼³Á¤
+            // Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ù¶óº¸µï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             transform.LookAt(target);
         }
     }

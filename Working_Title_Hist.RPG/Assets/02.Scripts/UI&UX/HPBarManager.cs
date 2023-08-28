@@ -20,7 +20,7 @@ public class HPBarManager : MonoBehaviour
         HPBar = root.Q<ProgressBar>("UserHP");
         var Label = HPBar.Q<Label>();
 
-        // ÃÊ±â °ª ¼³Á¤
+        // ï¿½Ê±ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         maxValue = PlayerState.PlayerHP;
         currentValue = maxValue;
         HPBar.value = maxValue;
@@ -37,10 +37,10 @@ public class HPBarManager : MonoBehaviour
         float maxValue = 100f;
         var Label = progressBar.Q<Label>();
 
-        // value °ª °¨¼Ò
+        // value ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         currentValue -= 10.0f;
         Label.text = currentValue.ToString();
-        //¾Ö´Ï¸ÞÀÌ¼Ç
+        //ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½
         PlayerAnim.SetWalkingAnimation(false);
         PlayerAnim.SetIdleAnimation(false);
         PlayerAnim.SetPlayerAttack(false);
@@ -55,7 +55,7 @@ public class HPBarManager : MonoBehaviour
 
         }
 
-        // value °ª¿¡ µû¶ó Ã¤¿öÁø ¹Ù ¾÷µ¥ÀÌÆ®
+        // value ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
         progressBar.value = currentValue;
     }
 
@@ -63,16 +63,16 @@ public class HPBarManager : MonoBehaviour
     {
         var root = UIDocument.rootVisualElement;
         EXPBar = root.Q<ProgressBar>("UserEXP");
-        EXPBar.value = PlayerState.PlayerEXP;
+        EXPBar.value = PlayerState.PlayerEXP / PlayerState.MaxEXP * 100.0f;
         var EXP = EXPBar.Q<Label>();
-        EXP.text = EXPBar.value.ToString();
+        EXP.text = PlayerState.PlayerEXP.ToString();
 
         if (HPBar.value == 0)
         {
-            // objectToDisable¸¦ ºñÈ°¼ºÈ­ÇÕ´Ï´Ù.
+            // objectToDisableï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½.
             objectToDisable.SetActive(false);
 
-            // objectToEnable¸¦ È°¼ºÈ­ÇÕ´Ï´Ù.
+            // objectToEnableï¿½ï¿½ È°ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½.
             objectToEnable.SetActive(true);
         }
     }
